@@ -1,55 +1,55 @@
 package com.epam.javaIntro.state;
 
 /*
- * 3.Создать объект класса Государство, используя классы Область, Район, Город.
- *   Методы: вывести на консоль столицу, количество областей, площадь, областные центры. 
+ * 3.пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ.
+ *   пїЅ12РІР°С‹С„РІ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. 
  */
 
 public class Main {
 	public static void main(String[] args) {
-		//Создание районов и добавление в них по паре городов
-		District district1 = new District("Смолевический");
-		district1.addCity(new City("Жодино", false, false, false));
-		district1.addCity(new City("Смолевичи", false, false, true));
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		District district1 = new District("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+		district1.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
+		district1.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, true));
 		
-		District district2 = new District("Минский");
-		district2.addCity(new City("Минск", true, true, true));
-		district2.addCity(new City("Колодищи", false, false, false));
+		District district2 = new District("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+		district2.addCity(new City("пїЅпїЅпїЅпїЅпїЅ", true, true, true));
+		district2.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
 		
-		District district3 = new District("Брестский");
-		district3.addCity(new City("Мухавец", false, false, false));
-		district3.addCity(new City("Брест", true, false, true));
+		District district3 = new District("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+		district3.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
+		district3.addCity(new City("пїЅпїЅпїЅпїЅпїЅ", true, false, true));
 		
-		District district4 = new District("Пинский");
-		district4.addCity(new City("Пинск", false, false, true));
-		district4.addCity(new City("Полесье", false, false, false));
+		District district4 = new District("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+		district4.addCity(new City("пїЅпїЅпїЅпїЅпїЅ", false, false, true));
+		district4.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
 		
-		District district5 = new District("Могилевский");
-		district5.addCity(new City("Могилев", true, false, true));
-		district5.addCity(new City("Сидоровичи", false, false, false));
+		District district5 = new District("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+		district5.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", true, false, true));
+		district5.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
 		
-		District district6 = new District("Бобруйский");
-		district6.addCity(new City("Бобруйск", false, false, false));
-		district6.addCity(new City("Мышковичи", false, false, false));
+		District district6 = new District("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+		district6.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
+		district6.addCity(new City("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", false, false, false));
 		
-		//Создание областей и добавление в них по паре районов
-		Region region1 = new Region("Минская");
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		Region region1 = new Region("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		region1.setSquare(25);
 		region1.addDistrict(district1);
 		region1.addDistrict(district2);
 		
-		Region region2 = new Region("Брестская");
+		Region region2 = new Region("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		region2.setSquare(30);
 		region2.addDistrict(district3);
 		region2.addDistrict(district4);
 		
-		Region region3 = new Region("Могилевская");
+		Region region3 = new Region("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		region3.setSquare(35);
 		region3.addDistrict(district5);
 		region3.addDistrict(district6);
 		
-		//Создание государства и добавление в него областей
-		State state = new State("Беларусь");
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		State state = new State("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		state.addRegion(region1);
 		state.addRegion(region2);
 		state.addRegion(region3);
