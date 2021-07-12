@@ -3,20 +3,21 @@ package com.epam.javaIntro.linearPrograms;
 import java.util.Scanner;
 
 /*
- * 1. Найдите  значение функции: z= ( (a–3 ) * b/ 2) + c.
+ * 1.РќР°Р№РґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё: z = ( (aвЂ“3 ) * b/ 2) + c.
  */
 
 public class Task1 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Введите значение переменной A: ");
-		int a = in.nextInt();
-		System.out.println("Введите значение переменной B: ");
-		int b = in.nextInt();
-		System.out.println("Введите значение переменной C: ");
-		int c = in.nextInt();
-		int z = ((a - 3) * b / 2) + c;
-		System.out.println("Результат: " + z);
+		double a, b, c, z;
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№ A: ");
+		a = in.nextDouble();
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№ B: ");
+		b = in.nextDouble();
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№ C: ");
+		c = in.nextDouble();
+		z = ((a - 3) * b / 2) + c;
+		System.out.println("Р РµСѓР·Р»СЊС‚Р°С‚: " + z);
 		in.close();
 	}
 }
