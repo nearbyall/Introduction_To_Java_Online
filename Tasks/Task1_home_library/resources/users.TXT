@@ -1,0 +1,2 @@
+2,Vladislav,nearbyall,88a7637293daa4012c8838c6e87230,notzloyhuman@gmail.com,admin
+0,Eduard,madesta,9567441bb6076cf39f16553bb7b376e,edik@gmail.com,user

@@ -3,21 +3,21 @@ package com.epam.javaIntro.multiArray;
 import java.util.Scanner;
 
 /*
- * 15.Найдите наибольший элемент матрицы и замените все нечетные элементы на него.
+ * 15.РќР°Р№РґРёС‚Рµ РЅР°РёР±РѕР»СЊС€РёР№ СЌР»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹ Рё Р·Р°РјРµРЅРёС‚СЊ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РЅР° РЅРµРіРѕ.
  */
 
 public class Task15 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во строк матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє N: ");
         int N = in.nextInt();
-        System.out.println("Введите кол-во столбцов матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ M: ");
         int M = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][M];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 matrixA[i][j] = (int) (Math.random() * 100 - 50);
@@ -35,7 +35,7 @@ public class Task15 {
             }
         }
 
-        System.out.println("\nИзмененная по условию матрица: ");
+        System.out.println("\nРР·РјРµРЅРµРЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         int currentElement = 1;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {

@@ -4,19 +4,18 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * Дана последовательность целых чисел a1, a2, ..., a(n).
- * Образовать новую последовательность, выбросив из исходной те члены,
- * которые равны min(a1, a2, ..., a(n)). 
+ * 8.Р”Р°РЅР°  РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ  С†РµР»С‹С…  С‡РёСЃРµР» a1, a2, ..., an.  РћР±СЂР°Р·РѕРІР°С‚СЊ  РЅРѕРІСѓСЋ  РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ,
+ *   РІС‹Р±СЂРѕСЃРёРІ РёР· РёСЃС…РѕРґРЅРѕР№ С‚Рµ С‡Р»РµРЅС‹, РєРѕС‚РѕСЂС‹Рµ СЂР°РІРЅС‹ min(a1, a2, ..., an).
  */
 
 public class Task8 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во элементов массива: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° N: ");
         int N = in.nextInt();
         int[] array = new int[N];
 
-        System.out.println("Сгенерированный массив N элементов: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N; i++) {
             array[i] = (int) (Math.random() * 100 - 50);
             System.out.print(array[i] + " ");
@@ -45,7 +44,7 @@ public class Task8 {
             }
         }
 
-        System.out.println("\nИзмененный по условиям массив: ");
+        System.out.println("\nРќРѕРІС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N - minCount; i++) {
             System.out.print(newArray[i] + " ");
         }

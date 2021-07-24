@@ -4,21 +4,21 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 7. Сформировать квадратную матрицу порядка N по правилу:
- *  A[I,J] = sin((I^2 - J^2) / N)
- *  и подсчитать количество положительных элементов в ней.
+ * 7.РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂСЏРґРєР° N РїРѕ РїСЂР°РІРёР»Сѓ: 
+ *   A[I,J] = sin((I^2 - J^2) / N)
+ *   Рё РїРѕРґСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РІ РЅРµР№.
  */
 
 public class Task7 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите размерность квадратной матрицы матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ N: ");
         int N = in.nextInt();
 
         double[][] matrixA;
         matrixA = new double[N][N];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂС†РёР°: ");
         int positiveCount = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
@@ -30,7 +30,7 @@ public class Task7 {
             }
             System.out.println();
         }
-        System.out.printf("\nКол-во положительных элементов: %d", positiveCount);
+        System.out.printf("\nРљРѕР»-РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РІ РЅРµР№: %d", positiveCount);
         in.close();
     }
 }

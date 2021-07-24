@@ -13,18 +13,49 @@ public class Engine {
 	
 	@Override
 	public String toString() {
-		return String.format("Тип питания двигателя: %s\n"
-						   + "Рабочий объем двигателя: %s л\n"
-						   + "Кол-во цилиндров: %s\n",
+		return String.format("РўРёРї РїРёС‚Р°РЅРёСЏ РґРІРёРіР°С‚РµР»СЏ: %s\n"
+						   + "Р Р°Р±РѕС‡РёР№ РѕР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ: %s Р»\n"
+						   + "РљРѕР»-РІРѕ С†РёР»РёРЅРґСЂРѕРІ: %s\n",
 						   enginePowerType, engineDisplacement, countOfCylinders);
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + countOfCylinders;
+		result = prime * result + engineDisplacement;
+		result = prime * result + ((enginePowerType == null) ? 0 : enginePowerType.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Engine other = (Engine) obj;
+		if (countOfCylinders != other.countOfCylinders)
+			return false;
+		if (engineDisplacement != other.engineDisplacement)
+			return false;
+		if (enginePowerType == null) {
+			if (other.enginePowerType != null)
+				return false;
+		} else if (!enginePowerType.equals(other.enginePowerType))
+			return false;
+		return true;
+	}
+
 	public void start() {
-		System.out.println("Двигатель завелся!");
+		System.out.println("Р”РІРёРіР°С‚РµР»СЊ Р·Р°РІРµР»СЃСЏ!");
 	}
 	
 	public void stop() {
-		System.out.println("Двигатель выключился.");
+		System.out.println("Р”РІРёРіР°С‚РµР»СЊ РІС‹РєР»СЋС‡РёР»СЃСЏ.");
 	}
 	
 	public String getEnginePowerType() {

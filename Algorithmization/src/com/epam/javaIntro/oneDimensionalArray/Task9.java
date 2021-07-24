@@ -4,18 +4,18 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 9. В массиве целых чисел с количеством элементов nнайти наиболее часто встречающееся число.
- *  Если таких чисел несколько, то определить наименьшее из них.
+ * 9.Р’ РјР°СЃСЃРёРІРµ С†РµР»С‹С… С‡РёСЃРµР» СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј СЌР»РµРјРµРЅС‚РѕРІ n РЅР°Р№С‚Рё РЅР°РёР±РѕР»РµРµ С‡Р°СЃС‚Рѕ РІСЃС‚СЂРµС‡Р°СЋС‰РµРµСЃСЏ С‡РёСЃР»Рѕ. 
+ *   Р•СЃР»Рё С‚Р°РєРёС… С‡РёСЃРµР» РЅРµСЃРєРѕР»СЊРєРѕ, С‚Рѕ РѕРїСЂРµРґРµР»РёС‚СЊ РЅР°РёРјРµРЅСЊС€РµРµ РёР· РЅРёС….
  */
 
 public class Task9 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во элементов массива: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: ");
         int N = in.nextInt();
         int[] array = new int[N];
 
-        System.out.println("Сгенерированный массив N элементов: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N; i++) {
             array[i] = (int) (Math.random() * 100 - 50);
             System.out.print(array[i] + " ");
@@ -34,6 +34,10 @@ public class Task9 {
             if (currentCounter > biggestCounter) {
                 biggestCounter = currentCounter;
                 frequentElement = i;
+            } else if (currentCounter == biggestCounter) {
+            	if (array[currentCounter] < array[biggestCounter]) {
+            		frequentElement = i;
+            	}
             }
             currentCounter = 0;
         }
@@ -46,11 +50,10 @@ public class Task9 {
         }
 
         if (biggestCounter != 0) {
-            System.out.println("\nНаиболее встречающийся элемент: " + array[frequentElement] +
-                               "\nКол-во повторений: " + biggestCounter);
-        } else {
-            System.out.println("\nПовторений нету, минимальный элемент: " + minValue);
-        }
+            System.out.println("\nРќР°РёР±РѕР»РµРµ РІСЃС‚СЂРµС‡Р°СЋС‰РёР№СЃСЏ СЌР»РµРјРµРЅС‚: " + array[frequentElement] +
+                               "\nРљРѕР»-РІРѕ: " + biggestCounter);
+        } 
+        
         in.close();
 	}
 }

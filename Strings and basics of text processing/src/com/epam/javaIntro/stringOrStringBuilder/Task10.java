@@ -1,9 +1,8 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 10. СтрокаXсостоит из нескольких предложений,
- *     каждое из которых кончается точкой, восклицательным или вопросительным знаком.
- *     Определить количество предложений в строкеX.
+ * 10.РЎС‚СЂРѕРєР° X СЃРѕСЃС‚РѕРёС‚ РёР· РЅРµСЃРєРѕР»СЊРєРёС… РїСЂРµРґР»РѕР¶РµРЅРёР№, РєР°Р¶РґРѕРµ РёР· РєРѕС‚РѕСЂС‹С… РєРѕРЅС‡Р°РµС‚СЃСЏ С‚РѕС‡РєРѕР№,
+ *    РІРѕСЃРєР»РёС†Р°С‚РµР»СЊРЅС‹Рј РёР»Рё РІРѕРїСЂРѕСЃРёС‚РµР»СЊРЅС‹Рј Р·РЅР°РєРѕРј. РћРїСЂРµРґРµР»РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґР»РѕР¶РµРЅРёР№ РІ СЃС‚СЂРѕРєРµ X.
  */
 
 public class Task10 {
@@ -23,7 +22,7 @@ public class Task10 {
 		String text = "Belarus is my Homeland. It is a country with unique history and rich cultural heritage. "
 					+ "Officially it is called the Republic of Belarus, "
 					+ "a sovereign independent state with its own government, constitution, state emblem, flag and anthem."
-					+ "Let’s talk about the Republic of Belarus. What can you tell me about our Motherland? ";
-		System.out.println("Кол-во предложений: " + countOfSentences(text));
+					+ "LetпїЅs talk about the Republic of Belarus. What can you tell me about our Motherland? ";
+		System.out.println("РљРѕР»-РІРѕ РїСЂРµРґР»РѕР¶РµРЅРёР№: " + countOfSentences(text));
 	}
 }

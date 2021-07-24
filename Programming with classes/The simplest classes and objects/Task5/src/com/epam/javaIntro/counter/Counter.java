@@ -17,8 +17,8 @@ public class Counter {
 			this.maxValue = maxValue;
 			this.currentValue = currentValue;
 		} else {
-			System.out.println("Были установлены неверные значения для счетчика." +
-							   "\nБудут установлены значения по умолчанию");
+			System.out.println("Р‘С‹Р»Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹ РЅРµРІРµСЂРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ СЃС‡РµС‚С‡РёРєР°." +
+							   "\nР‘СѓРґСѓС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹ Р·РЅР°С‡РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ");
 			this.minValue = 0;
 			this.maxValue = 1000;
 			this.currentValue = 1;
@@ -26,41 +26,74 @@ public class Counter {
 		
 	}
 	
+	@Override
+	public String toString() {
+		return "Counter [minValue=" + minValue + ", maxValue=" + maxValue + ", currentValue=" + currentValue + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + currentValue;
+		result = prime * result + maxValue;
+		result = prime * result + minValue;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Counter other = (Counter) obj;
+		if (currentValue != other.currentValue)
+			return false;
+		if (maxValue != other.maxValue)
+			return false;
+		if (minValue != other.minValue)
+			return false;
+		return true;
+	}
+
 	public void showCurrentInfo() {
-		System.out.println("\nНижняя граница счетчика: " + minValue + 
-						   "\nВерхняя граница счетчика: " + maxValue +
-						   "\nТекущее значение счетчика: " + currentValue + '\n');
+		System.out.println("\nРќРёР¶РЅСЏСЏ РіСЂР°РЅРёС†Р° СЃС‡РµС‚С‡РёРєР°: " + minValue + 
+						   "\nР’РµСЂС…РЅСЏСЏ РіСЂР°РЅРёС†Р° СЃС‡РµС‚С‡РёРєР°: " + maxValue +
+						   "\nРўРµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ СЃС‡РµС‚С‡РёРєР°: " + currentValue + '\n');
 	}
 	
 	public void increasingValue() {
 		if (currentValue == maxValue) {
-			System.out.println("Верхняя граница счетчика уже достигнута.");
+			System.out.println("Р’РµСЂС…РЅСЏСЏ РіСЂР°РЅРёС†Р° СЃС‡РµС‚С‡РёРєР° СѓР¶Рµ РґРѕСЃС‚РёРіРЅСѓС‚Р°.");
 			return;
 		}
 		currentValue++;
 		if (currentValue == maxValue) {
-			System.out.println("Граница счетчика была достигнута!\n" +
-							   "Текущее значение: " + currentValue);
+			System.out.println("Р“СЂР°РЅРёС†Р° СЃС‡РµС‚С‡РёРєР° Р±С‹Р»Р° РґРѕСЃС‚РёРіРЅСѓС‚Р°!\n" +
+							   "РўРµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ: " + currentValue);
 		}
 		if (currentValue < maxValue) {
-			System.out.println("Значение счетчика было увеличено!\n" +
-							   "Текущее значение: " + currentValue);
+			System.out.println("Р—РЅР°С‡РµРЅРёРµ СЃС‡РµС‚С‡РёРєР° Р±С‹Р»Рѕ СѓРІРµР»РёС‡РµРЅРѕ!\n" +
+							   "РўРµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ: " + currentValue);
 		}
 	}
 	
 	public void decreasingValue() {
 		if (currentValue == minValue) {
-			System.out.println("Нижняя граница счетчика уже достигнута.");
+			System.out.println("РќРёР¶РЅСЏСЏ РіСЂР°РЅРёС†Р° СЃС‡РµС‚С‡РёРєР° СѓР¶Рµ РґРѕСЃС‚РёРіРЅСѓС‚Р°.");
 			return;
 		}
 		currentValue--;
 		if (currentValue == minValue) {
-			System.out.println("Нижняя граница счетчика была достигнута!\n" +
-							   "Текущее значение: " + currentValue);
+			System.out.println("РќРёР¶РЅСЏСЏ РіСЂР°РЅРёС†Р° СЃС‡РµС‚С‡РёРєР° Р±С‹Р»Р° РґРѕСЃС‚РёРіРЅСѓС‚Р°!\n" +
+							   "РўРµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ: " + currentValue);
 		}
 		if (currentValue > minValue) {
-			System.out.println("Значение счетчика было уменьшено!\n" +
-							   "Текущее значение: " + currentValue);
+			System.out.println("Р—РЅР°С‡РµРЅРёРµ СЃС‡РµС‚С‡РёРєР° Р±С‹Р»Рѕ СѓРјРµРЅСЊС€РµРЅРѕ!\n" +
+							   "РўРµРєСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ: " + currentValue);
 		}
 	}
 }

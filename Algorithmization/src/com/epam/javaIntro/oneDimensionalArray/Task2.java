@@ -4,26 +4,26 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 2. Дана последовательность действительных чисел а1,а2 ,..., а(n). 
- * Заменить все ее члены, большие данного Z, этим числом. Подсчитать количество замен.
+ * 2.Р”Р°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР» Р°1,Р°2 ,..., Р°n.
+ *   Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ РµРµ С‡Р»РµРЅС‹, Р±РѕР»СЊС€РёРµ РґР°РЅРЅРѕРіРѕ Z, СЌС‚РёРј С‡РёСЃР»РѕРј. РџРѕРґСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РјРµРЅ.
  */
 
 public class Task2 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во элементов числовой последовательности N: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° N: ");
         int N = in.nextInt();
-        System.out.println("Введите число Z");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Z");
         int Z = in.nextInt();
+        
         int[] nums = new int[N];
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N; i++) {
             nums[i] = (int) (Math.random() * 100);
-        }
-        System.out.println("Заданный массив: ");
-        for (int i = 0; i < N; i++) {
             System.out.print(nums[i] + " ");
         }
-        int count = 0; // Кол-во замен
+        
+        int count = 0;
         for (int i = 0; i < N; i++) {
             if (nums[i] > Z) {
                 nums[i] = Z;
@@ -31,11 +31,14 @@ public class Task2 {
             }
 
         }
-        System.out.println("\nИзмененный массив: ");
+        
+        System.out.println("\nРР·РјРµРЅРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N; i++) {
             System.out.print(nums[i] + " ");
         }
-        System.out.println("\nКол-во замен: " + count);
+        
+        System.out.println("\nРљРѕР»-РІРѕ Р·Р°РјРµРЅ: " + count);
+        
         in.close();
 	}
 }

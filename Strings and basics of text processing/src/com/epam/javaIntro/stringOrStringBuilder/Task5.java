@@ -1,7 +1,7 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 5. Подсчитать, сколько раз среди символов заданной строки встречается буква “а”.
+ * 5.РџРѕРґСЃС‡РёС‚Р°С‚СЊ, СЃРєРѕР»СЊРєРѕ СЂР°Р· СЃСЂРµРґРё СЃРёРјРІРѕР»РѕРІ Р·Р°РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРё РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ Р±СѓРєРІР° вЂњР°вЂќ.
  */
 
 public class Task5 {
@@ -20,6 +20,6 @@ public class Task5 {
 					+ "and then change your number\n"
 					+ "I guess that I don't need that though\n"
 					+ "Now you're just somebody that I used to know\n";
-		System.out.println("Кол-во: " + countOfSymbol(text, 'a'));
+		System.out.println("РљРѕР»-РІРѕ: " + countOfSymbol(text, 'a'));
 	}
 }

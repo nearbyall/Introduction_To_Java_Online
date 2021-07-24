@@ -6,14 +6,14 @@ import java.util.Collections;
 import java.util.Scanner;
 
 /*
- * 14. Сформировать случайную матрицу mxn, состоящую из нулей и единиц, 
- * причем в каждом столбце число единиц равно номеру столбца.
+ * 14.РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ СЃР»СѓС‡Р°Р№РЅСѓСЋ РјР°С‚СЂРёС†Сѓ mxn, СЃРѕСЃС‚РѕСЏС‰СѓСЋ РёР· РЅСѓР»РµР№ Рё РµРґРёРЅРёС†,
+ *    РїСЂРёС‡РµРј РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ С‡РёСЃР»Рѕ РµРґРёРЅРёС† СЂР°РІРЅРѕ РЅРѕРјРµСЂСѓ СЃС‚РѕР»Р±С†Р°.
  */
 
 public class Task14 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите размерность квадратной матрицы матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹: ");
         int N = in.nextInt();
 
         int[][] matrixA;
@@ -41,7 +41,7 @@ public class Task14 {
             arrayList.clear();
         }
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int[] each : matrixA) {
             System.out.println(Arrays.toString(each));
         }

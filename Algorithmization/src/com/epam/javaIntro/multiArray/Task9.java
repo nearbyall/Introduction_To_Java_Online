@@ -4,23 +4,23 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 9. Задана матрица неотрицательных чисел. 
- * Посчитать сумму элементов в каждом столбце. 
- * Определить, какой столбец содержит максимальную сумму.
+ * 9.Р—Р°РґР°РЅР° РјР°С‚СЂРёС†Р° РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР».
+ *   РџРѕСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ.
+ *   РћРїСЂРµРґРµР»РёС‚СЊ, РєР°РєРѕР№ СЃС‚РѕР»Р±РµС† СЃРѕРґРµСЂР¶РёС‚ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃСѓРјРјСѓ.
  */
 
 public class Task9 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во строк матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє: ");
         int N = in.nextInt();
-        System.out.println("Введите кол-во столбцов матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ: ");
         int M = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][M];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 matrixA[i][j] = (int) (Math.random() * 100);
@@ -44,7 +44,7 @@ public class Task9 {
 
         }
 
-        System.out.println("\nСтолбец с наибольшей суммой: " + columnIndex + ", сумма элементов столбца: " + biggestSum);
+        System.out.println("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р°: " + columnIndex + ", РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ: " + biggestSum);
         in.close();
     }
 }

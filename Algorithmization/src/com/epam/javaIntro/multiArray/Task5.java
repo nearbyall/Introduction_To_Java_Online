@@ -3,7 +3,7 @@ package com.epam.javaIntro.multiArray;
 import java.util.Scanner;
 
 /*
- * 5. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
+ * 5.РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂСЏРґРєР° n РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РѕР±СЂР°Р·С†Сѓ(n-С‡РµС‚РЅРѕРµ):
  *      1   1   1  ... 1   1   1
  *      2   2   2  ... 2   2   0
  *      3   3   3  ... 3   0   0
@@ -15,10 +15,10 @@ import java.util.Scanner;
 public class Task5 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите размерность квадратной матрицы матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РµС‚РЅСѓСЋ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ N: ");
         int N = in.nextInt();
         if (N % 2 != 0) {
-        	System.out.println("Размерность матрицы должна быть четной");
+        	System.out.println("Р’РІРµРґРµРЅР° РЅРµРєРѕСЂСЂРµРєС‚РЅР°СЏ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ");
         } else {
         	int[][] matrixA;
             matrixA = new int[N][N];
@@ -37,7 +37,7 @@ public class Task5 {
                 count--;
             }
 
-            System.out.println("Сгенерированная матрица: ");
+            System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
                     System.out.printf("%3d ", matrixA[i][j]);

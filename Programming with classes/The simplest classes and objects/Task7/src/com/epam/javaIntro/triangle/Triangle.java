@@ -1,7 +1,7 @@
 package com.epam.javaIntro.triangle;
 
 public class Triangle {
-    //Точки A,B и C точки вершин треугольника, Point отдельный класс
+    //РўРѕС‡РєРё A,B Рё C С‚РѕС‡РєРё РІРµСЂС€РёРЅ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°, Point РѕС‚РґРµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ
 	private Point A;
 	private Point B;
 	private Point C;
@@ -18,6 +18,64 @@ public class Triangle {
 		AC = Point.getDistanceBetweenPoints(A, C);
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("\nР’РµСЂС€РёРЅР° A С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: (%.2f;%.2f)"
+					       + "\nР’РµСЂС€РёРЅР° B С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: (%.2f;%.2f)"
+					       + "\nР’РµСЂС€РёРЅР° C С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: (%.2f;%.2f)",
+					       A.getX(), A.getY(), B.getX(), B.getY(), C.getX(), C.getY());
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((A == null) ? 0 : A.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(AB);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(AC);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((B == null) ? 0 : B.hashCode());
+		temp = Double.doubleToLongBits(BC);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((C == null) ? 0 : C.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Triangle other = (Triangle) obj;
+		if (A == null) {
+			if (other.A != null)
+				return false;
+		} else if (!A.equals(other.A))
+			return false;
+		if (Double.doubleToLongBits(AB) != Double.doubleToLongBits(other.AB))
+			return false;
+		if (Double.doubleToLongBits(AC) != Double.doubleToLongBits(other.AC))
+			return false;
+		if (B == null) {
+			if (other.B != null)
+				return false;
+		} else if (!B.equals(other.B))
+			return false;
+		if (Double.doubleToLongBits(BC) != Double.doubleToLongBits(other.BC))
+			return false;
+		if (C == null) {
+			if (other.C != null)
+				return false;
+		} else if (!C.equals(other.C))
+			return false;
+		return true;
+	}
+
 	public static Triangle createTriangle(Point A, Point B, Point C) {
 		Triangle triangle = new Triangle(A, B, C);
 		return triangle;
@@ -27,7 +85,7 @@ public class Triangle {
 		return AB + BC + AC;
 	}
 	
-	//По формуле Герона, p - полупериметр
+	//РџРѕ С„РѕСЂРјСѓР»Рµ Р“РµСЂРѕРЅР°, p - РїРѕР»СѓРїРµСЂРёРјРµС‚СЂ
 	public double getSquare() {
 		double p = this.getPerimeter() / 2;
 		return Math.sqrt(p*(p - AB)*(p - BC)*(p - AC));
@@ -41,9 +99,9 @@ public class Triangle {
 	}
 	
 	public void showInfo() {
-		System.out.printf("\nВершина A треугольника: (%.2f;%.2f)"
-					    + "\nВершина B треугольника: (%.2f;%.2f)"
-					    + "\nВершина C треугольника: (%.2f;%.2f)",
+		System.out.printf("\nР’РµСЂС€РёРЅР° A С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: (%.2f;%.2f)"
+					    + "\nР’РµСЂС€РёРЅР° B С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: (%.2f;%.2f)"
+					    + "\nР’РµСЂС€РёРЅР° C С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: (%.2f;%.2f)",
 					    A.getX(), A.getY(), B.getX(), B.getY(), C.getX(), C.getY());
 	}
 }

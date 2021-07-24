@@ -12,7 +12,7 @@ public class Student {
 	}
 	
 	public static void printBestStudents(Student[] students) {
-		System.out.println("Студенты, оценки которых равны или больше девяти:\n");
+		System.out.println("РЎС‚СѓРґРµРЅС‚С‹, РѕС†РµРЅРєРё РєРѕС‚РѕСЂС‹С… СЂР°РІРЅС‹ РёР»Рё Р±РѕР»СЊС€Рµ РґРµРІСЏС‚Рё:\n");
 		for (Student student : students) {
 			int minMark = 10;
 			for (int i = 0; i < student.marks.length; i++) {
@@ -21,8 +21,8 @@ public class Student {
 				}
 			}
 			if (minMark >= 9) {
-				System.out.println("Имя студента: " + student.name +
-								   "\nНомер группы студента: " + student.group + "\n");
+				System.out.println("РРјСЏ СЃС‚СѓРґРµРЅС‚Р°: " + student.name +
+								   "\nРќРѕРјРµСЂ РіСЂСѓРїРїС‹ СЃС‚СѓРґРµРЅС‚Р°: " + student.group + "\n");
 			}
 		}
 	}

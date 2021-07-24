@@ -4,21 +4,21 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 1. Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
+ * 1.Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЃС‚РѕР»Р±С†С‹, Сѓ РєРѕС‚РѕСЂС‹С… РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ Р±РѕР»СЊС€Рµ РїРѕСЃР»РµРґРЅРµРіРѕ.
  */
 
 public class Task1 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во строк матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє N: ");
         int N = in.nextInt();
-        System.out.println("Введите кол-во столбцов матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ M: ");
         int M = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][M];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 matrixA[i][j] = (int) (Math.random() * 100) - 50;
@@ -27,7 +27,7 @@ public class Task1 {
             System.out.println();
         }
 
-        System.out.println("\nНечетные столбцы,у которых значение последнего элемента меньше значения первого элемента: ");
+        System.out.println("\nРќРµС‡РµС‚РЅС‹Рµ СЃС‚РѕР»Р±С†С‹, Сѓ РєРѕС‚РѕСЂС‹С… РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ Р±РѕР»СЊС€Рµ РїРѕСЃР»РµРґРЅРµРіРѕ: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j += 2) {
                 if (matrixA[0][j] > matrixA[N - 1][j]) {
@@ -35,7 +35,7 @@ public class Task1 {
                 }
             }
             System.out.println();
-        }
+        }    
         in.close();
     }
 }

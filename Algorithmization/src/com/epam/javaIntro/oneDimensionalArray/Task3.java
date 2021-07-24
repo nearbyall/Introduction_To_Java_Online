@@ -4,20 +4,22 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 3.  Дан  массив  действительных  чисел,  размерность  которого N.
- * Подсчитать,  сколько  в  нем  отрицательных, положительных и нулевых элементов.
+ * 3.Р”Р°РЅ  РјР°СЃСЃРёРІ  РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С…  С‡РёСЃРµР»,  СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ  РєРѕС‚РѕСЂРѕРіРѕ N.  РџРѕРґСЃС‡РёС‚Р°С‚СЊ,
+ *   СЃРєРѕР»СЊРєРѕ  РІ  РЅРµРј  РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С…, РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… Рё РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ.
  */
 
 public class Task3 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во элементов массива: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° N: ");
         int N = in.nextInt();
+        
         int positiveCount = 0;
         int negativeCount = 0;
         int nullCount = 0;
+        
         int[] array = new int[N];
-        System.out.println("Сгенерированный массив N элементов: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0;i < N; i++) {
             array[i] = (int) (Math.random() * 100 - 50);
             System.out.print(array[i] + " ");
@@ -29,9 +31,10 @@ public class Task3 {
                 nullCount++;
             }
         }
-        System.out.println("\n Кол-во положительных чисел: " + positiveCount +
-                           "\n Кол-во отрицательных чисел: " + negativeCount +
-                           "\n Кол-во нулевых значений: " + nullCount );
+        System.out.println("\n РљРѕР»-РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: " + positiveCount +
+                           "\n РљРѕР»-РІРѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ: " + negativeCount +
+                           "\n РљРѕР»-РІРѕ РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ: " + nullCount );
+        
         in.close();
 	}
 }

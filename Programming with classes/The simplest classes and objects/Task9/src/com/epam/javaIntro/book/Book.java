@@ -21,17 +21,73 @@ public class Book {
 		this.bindingType = bindingType;
 	}
 	
+	@Override
 	public String toString() {
-		return String.format("Id книги: %d\n"
-						   + "Название: %s\n"
-						   + "Автор(ы): %s\n"
-						   + "Издательство: %s\n"
-						   + "Год публикации: %d\n"
-						   + "Цена: %.2f $\n"
-						   + "Тип переплета: %s\n",
+		return String.format("Id РєРЅРёРіРё: %d\n"
+						   + "РќР°Р·РІР°РЅРёРµ: %s\n"
+						   + "РђРІС‚РѕСЂ(С‹): %s\n"
+						   + "РР·РґР°С‚РµР»СЊСЃС‚РІРѕ: %s\n"
+						   + "Р“РѕРґ РїСѓР±Р»РёРєР°С†РёРё: %d\n"
+						   + "Р¦РµРЅР°: %.2f $\n"
+						   + "РўРёРї РїРµСЂРµРїР»РµС‚Р°: %s\n",
 						   id, name, authors, publisher, yearOfPublishing, price, bindingType);
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((authors == null) ? 0 : authors.hashCode());
+		result = prime * result + ((bindingType == null) ? 0 : bindingType.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + numberOfPages;
+		result = prime * result + Float.floatToIntBits(price);
+		result = prime * result + ((publisher == null) ? 0 : publisher.hashCode());
+		result = prime * result + yearOfPublishing;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (authors == null) {
+			if (other.authors != null)
+				return false;
+		} else if (!authors.equals(other.authors))
+			return false;
+		if (bindingType == null) {
+			if (other.bindingType != null)
+				return false;
+		} else if (!bindingType.equals(other.bindingType))
+			return false;
+		if (id != other.id)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (numberOfPages != other.numberOfPages)
+			return false;
+		if (Float.floatToIntBits(price) != Float.floatToIntBits(other.price))
+			return false;
+		if (publisher == null) {
+			if (other.publisher != null)
+				return false;
+		} else if (!publisher.equals(other.publisher))
+			return false;
+		if (yearOfPublishing != other.yearOfPublishing)
+			return false;
+		return true;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -96,3 +152,4 @@ public class Book {
 		this.bindingType = bindingType;
 	}
 }
+

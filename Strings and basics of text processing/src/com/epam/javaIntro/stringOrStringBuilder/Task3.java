@@ -1,7 +1,7 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 3. Проверить, является ли заданное слово палиндромом.
+ * 3.РџСЂРѕРІРµСЂРёС‚СЊ, СЏРІР»СЏРµС‚СЃСЏ Р»Рё Р·Р°РґР°РЅРЅРѕРµ СЃР»РѕРІРѕ РїР°Р»РёРЅРґСЂРѕРјРѕРј. 
  */
 
 public class Task3 {
@@ -15,8 +15,8 @@ public class Task3 {
 	}
 	
 	public static void main(String[] args) {
-		String firstWord = "шалаш";
-		String secondWord = "разбойник";
+		String firstWord = "С€Р°Р»Р°С€";
+		String secondWord = "РєР°СЂР°РєР°С‚РёС†Р°";
 		System.out.println(firstWord + " "  + isPalindrome(firstWord));
 		System.out.println(secondWord + " "  + isPalindrome(secondWord));
 	}

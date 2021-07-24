@@ -1,7 +1,7 @@
 package com.epam.javaIntro.arrayOfCharacter;
 
 /*
- * 4. В строке найти количество чисел.
+ * 4.Р’ СЃС‚СЂРѕРєРµ РЅР°Р№С‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР».
  */
 
 public class Task4 {
@@ -22,8 +22,8 @@ public class Task4 {
 	}
 	
 	public static void main(String[] args) {
-		String text = "I 2 am 3 studying 4 2 at 521 the 6 faculty 689 of physics";
+		String text = "I 2  3 study 4 2 at 521 the 6 faculty 689 of physics";
 		int count = countOfNumbers(text);
-		System.out.println("Колличество чисел в тексте: " + count);
+		System.out.println("РљРѕР»-РІРѕ С‡РёСЃРµР» РІ С‚РµРєСЃС‚Рµ: " + count);
 	}
 }

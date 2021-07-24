@@ -1,20 +1,20 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 4. С помощью функции копирования и операции конкатенации составить из частей слова “информатика” слово “торт”.
+ * 4.РЎ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё РєРѕРїРёСЂРѕРІР°РЅРёСЏ Рё РѕРїРµСЂР°С†РёРё РєРѕРЅРєР°С‚РµРЅР°С†РёРё СЃРѕСЃС‚Р°РІРёС‚СЊ РёР· С‡Р°СЃС‚РµР№ СЃР»РѕРІР° вЂњРёРЅС„РѕСЂРјР°С‚РёРєР°вЂќ СЃР»РѕРІРѕ вЂњС‚РѕСЂС‚вЂќ.
  */
 
 public class Task4 {
 	public static String informaticsToCake (String informatics) {
-		String cake = String.valueOf(informatics.charAt(informatics.indexOf('т')));
-		cake += String.valueOf(informatics.charAt(informatics.indexOf('о')));
-		cake += String.valueOf(informatics.charAt(informatics.indexOf('р')));
-		cake += String.valueOf(informatics.charAt(informatics.indexOf('т')));
+		String cake = String.valueOf(informatics.charAt(informatics.indexOf('С‚')));
+		cake += String.valueOf(informatics.charAt(informatics.indexOf('Рѕ')));
+		cake += String.valueOf(informatics.charAt(informatics.indexOf('СЂ')));
+		cake += String.valueOf(informatics.charAt(informatics.indexOf('С‚')));
 		return cake;
 	}
 	
 	public static void main(String[] args) {
-		String informatics = "информатика";
+		String informatics = "РёРЅС„РѕСЂРјР°С‚РёРєР°";
 		System.out.println(informaticsToCake(informatics));
 	}
 }

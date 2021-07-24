@@ -3,21 +3,21 @@ package com.epam.javaIntro.multiArray;
 import java.util.Scanner;
 
 /*
- * 13. Отсотрировать столбцы матрицы по возрастанию и убыванию значений эементов.
+ * 13.РћС‚СЃРѕС‚СЂРёСЂРѕРІР°С‚СЊ СЃС‚РѕР±С†С‹ РјР°С‚СЂРёС†С‹ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ Рё СѓР±С‹РІР°РЅРёСЋ Р·РЅР°С‡РµРЅРёР№ СЌРµРјРµРЅС‚РѕРІ.
  */
 
 public class Task13 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во строк матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє N: ");
         int N = in.nextInt();
-        System.out.println("Введите кол-во столбцов матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ M: ");
         int M = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][M];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 matrixA[i][j] = (int) (Math.random() * 100 - 50);
@@ -38,7 +38,7 @@ public class Task13 {
             }
         }
 
-        System.out.println("Матрица с столбцами отсортированными по возврастанию");
+        System.out.println("РњР°С‚СЂРёС†Р° СЃРѕ СЃС‚РѕР»Р±С†Р°РјРё РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹РјРё РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 System.out.printf("%3d ", matrixA[i][j]);
@@ -58,7 +58,7 @@ public class Task13 {
             }
         }
 
-        System.out.println("Матрица с столбцами отсортированными по убыванию");
+        System.out.println("РњР°С‚СЂРёС†Р° СЃРѕ СЃС‚РѕР»Р±С†Р°РјРё РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹РјРё РїРѕ СѓР±С‹РІР°РЅРёСЋ: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 System.out.printf("%3d ", matrixA[i][j]);

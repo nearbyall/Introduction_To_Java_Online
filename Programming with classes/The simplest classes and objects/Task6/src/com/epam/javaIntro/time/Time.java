@@ -17,6 +17,39 @@ public class Time {
 		this.setHours(hours);
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("Время %02d:%02d:%02d\n", hours, minutes, seconds);
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + hours;
+		result = prime * result + minutes;
+		result = prime * result + seconds;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Time other = (Time) obj;
+		if (hours != other.hours)
+			return false;
+		if (minutes != other.minutes)
+			return false;
+		if (seconds != other.seconds)
+			return false;
+		return true;
+	}
+
 	public void setSeconds(int seconds) {
 		if (seconds >= 0 && seconds < 60) {
 			this.seconds = seconds;
@@ -68,6 +101,6 @@ public class Time {
 	}
 	
 	public void showTime() {
-		System.out.printf("����� %02d:%02d:%02d\n", hours, minutes, seconds);
+		System.out.printf("Время %02d:%02d:%02d\n", hours, minutes, seconds);
 	}
 }

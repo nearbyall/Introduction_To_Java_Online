@@ -1,7 +1,7 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 2. В строке вставить после каждого символа 'a' символ 'b'.
+ * 2.Р’ СЃС‚СЂРѕРєРµ РІСЃС‚Р°РІРёС‚СЊ РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ СЃРёРјРІРѕР»Р° 'a' СЃРёРјРІРѕР» 'b'.
  */
 
 public class Task2 {
@@ -18,6 +18,6 @@ public class Task2 {
 	
 	public static void main(String[] args) {
 		String text = "My name is Vlad";
-		System.out.println("Результат: " + aToB(text));
+		System.out.println("Р РµР·СѓР»СЊС‚Р°С‚: " + aToB(text));
 	}
 }

@@ -17,12 +17,12 @@ public class Test1 {
 	}
 	
 	public void sumVariables() {
-		System.out.println("Сумма двух переменных равна: " + (firstVariable + secondVariable));
+		System.out.println("РЎСѓРјРјР° РґРІСѓС… РїРµСЂРµРјРµРЅРЅС‹С…: " + (firstVariable + secondVariable));
 	}
 	
 	public void printVariables() {
-		System.out.println("Первая переменная равна: " + firstVariable + 
-						   "\nВторая переменная равна: " + secondVariable +
-						   "\nВывод закончен.\n");
+		System.out.println("РџРµСЂРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ: " + firstVariable + 
+						   "\nР’С‚РѕСЂР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ: " + secondVariable +
+						   "\nР’С‹РІРѕРґ Р·Р°РєРѕРЅС‡РµРЅ.\n");
 	}
 }

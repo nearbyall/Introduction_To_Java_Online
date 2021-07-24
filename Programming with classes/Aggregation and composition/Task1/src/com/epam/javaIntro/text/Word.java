@@ -24,12 +24,10 @@ public class Word {
 		this.word = word;
 	}
 	
-	//ћетод дл€ перевода первой буквы к верхнему регистру
 	public void converFirstLetterToUppercase() {
 		word.setCharAt(0, Character.toUpperCase(word.charAt(0)));
 	}
 	
-	//ћетод дл€ перевода первой буквы к нижнему регистру
 	public void converFirstLetterToLowercase() {
 		word.setCharAt(0, Character.toLowerCase(word.charAt(0)));
 	}

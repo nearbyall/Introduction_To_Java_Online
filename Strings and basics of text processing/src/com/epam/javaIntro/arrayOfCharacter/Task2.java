@@ -1,7 +1,7 @@
 package com.epam.javaIntro.arrayOfCharacter;
 
 /*
- * 2.Замените в строке все вхождения 'word' на 'letter'.
+ * 2.Р—Р°РјРµРЅРёС‚Рµ РІ СЃС‚СЂРѕРєРµ РІСЃРµ РІС…РѕР¶РґРµРЅРёСЏ 'word' РЅР° 'letter'. 
  */
 
 public class Task2 {
@@ -9,10 +9,10 @@ public class Task2 {
 		StringBuilder strBuilder = new StringBuilder();
 		for (int i = 0; i < str.length(); i++) {
 			if (i + 3 < str.length() && 
-				   str.charAt(i) == 'w' &&
-				   str.charAt(i + 1) == 'o' &&
-				   str.charAt(i + 2) == 'r' &&
-				   str.charAt(i + 3) == 'd') {
+						str.charAt(i) == 'w' &&
+						str.charAt(i + 1) == 'o' &&
+						str.charAt(i + 2) == 'r' &&
+						str.charAt(i + 3) == 'd') {
 					strBuilder.append("letter");
 					i += 3;
 				} else {

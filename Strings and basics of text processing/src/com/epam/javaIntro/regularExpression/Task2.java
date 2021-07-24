@@ -4,37 +4,44 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*
- * 2.Дана строка, содержащая следующий текст (xml-документ):
- * <notes>
- *    <note id = "1">
- *       <to>Вася</to>
- *       <from>Света</from>
- *       <heading>Напоминание</heading>
- *       <body>Позвони мне завтра!</body>
- *    </note>
- *    <note id = "2">
- *        <to>Петя</to>
- *        <from>Маша</from>
- *        <heading>Важное напоминание</heading>
- *        <body/>
- *    </note>
- * </notes>
- * Напишите анализатор, позволяющий последовательно возвращать содержимое узлов
- * xml-документа и его тип (открывающий тег, закрывающий тег, содержимое тега,
- * тег без тела). Пользоваться готовыми парсерами XML для решения данной задачи нельзя.
+ * 2.Р”Р°РЅР° СЃС‚СЂРѕРєР°, СЃРѕРґРµСЂР¶Р°С‰Р°СЏ СЃР»РµРґСѓСЋС‰РёР№ С‚РµРєСЃС‚ (xml-РґРѕРєСѓРјРµРЅС‚):
+ *   <notes>
+ *      <note id = "1">
+ *         <to>Р’Р°СЃСЏ</to>
+ *         <from>РЎРІРµС‚Р°</from>
+ *         <heading>РќР°РїРѕРјРёРЅР°РЅРёРµ</heading>
+ *         <body>РџРѕР·РІРѕРЅРё РјРЅРµ Р·Р°РІС‚СЂР°!</body>
+ *      </note>
+ *      <note id = "2">
+ *          <to>РџРµС‚СЏ</to>
+ *          <from>РњР°С€Р°</from>
+ *          <heading>Р’Р°Р¶РЅРѕРµ РЅР°РїРѕРјРёРЅР°РЅРёРµ</heading>
+ *          <body/>
+ *      </note>
+ *   </notes>
+ *   РќР°РїРёС€РёС‚Рµ Р°РЅР°Р»РёР·Р°С‚РѕСЂ, РїРѕР·РІРѕР»СЏСЋС‰РёР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ СѓР·Р»РѕРІ
+ *   xml-РґРѕРєСѓРјРµРЅС‚Р° Рё РµРіРѕ С‚РёРї (РѕС‚РєСЂС‹РІР°СЋС‰РёР№ С‚РµРі, Р·Р°РєСЂС‹РІР°СЋС‰РёР№ С‚РµРі, СЃРѕРґРµСЂР¶РёРјРѕРµ С‚РµРіР°,
+ *   С‚РµРі Р±РµР· С‚РµР»Р°). РџРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РіРѕС‚РѕРІС‹РјРё РїР°СЂСЃРµСЂР°РјРё XML РґР»СЏ СЂРµС€РµРЅРёСЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РЅРµР»СЊР·СЏ.
  */
 
 public class Task2 {
 	public static String XMLParser(String XML) {
 		StringBuilder strBuilder = new StringBuilder();
-        Pattern pOpen = Pattern.compile("<\\w.+?>");
-        Pattern pClose = Pattern.compile("</\\w+>");
-        Pattern pBody = Pattern.compile(">.+?<");
-        Pattern pEmpty = Pattern.compile("<\\w.+?/>");
+		
+		String OPEN_REGEX = new String("<\\w.+?>");
+		String CLOSE_REGEX = new String("</\\w+>");
+		String BODY_REGEX = new String(">.+?<");
+		String EMPTY_REGEX = new String("<\\w.+?/>");
+		
+        Pattern pOpen = Pattern.compile(OPEN_REGEX);
+        Pattern pClose = Pattern.compile(CLOSE_REGEX);
+        Pattern pBody = Pattern.compile(BODY_REGEX);
+        Pattern pEmpty = Pattern.compile(EMPTY_REGEX);
 
-        String [] lines = XML.split("\n\\s*"); /* разбиваем xml построчно */
+        //Р Р°Р·Р±РёРІР°РµРј xml РїРѕСЃС‚СЂРѕС‡РЅРѕ
+        String [] lines = XML.split("\n\\s*"); 
 
-        /* проверяем содержимое каждой строки */
+        //РџСЂРѕРІРµСЂСЏРµРј СЃРѕРґРµСЂР¶РёРјРѕРµ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРё
         for (String line : lines) {
             Matcher mOpen = pOpen.matcher(line);
             Matcher mClose = pClose.matcher(line);
@@ -42,41 +49,40 @@ public class Task2 {
             Matcher mEmpty = pEmpty.matcher(line);
             if (mEmpty.find()) {
                 strBuilder.append(mEmpty.group());
-                strBuilder.append(" - тег без тела\n");
+                strBuilder.append(" - РїСѓСЃС‚РѕР№ С‚РµРі\n");
             }
             else if (mOpen.find()) {
                 strBuilder.append(mOpen.group());
-                strBuilder.append(" - открывающий тег\n");
+                strBuilder.append(" - РѕС‚РєСЂС‹РІР°СЋС‰РёР№ С‚РµРі\n");
             }
             if (mBody.find()) {
                 strBuilder.append(mBody.group().substring(1));
-                strBuilder.append("\b - содержимое тега\n");
+                strBuilder.append("\b - СЃРѕРґРµСЂР¶РёРјРѕРµ С‚РµРіР°\n");
             }
             if (mClose.find()) {
                 strBuilder.append(mClose.group());
-                strBuilder.append(" - закрывающий тег\n");
+                strBuilder.append(" - Р·Р°РєСЂС‹РІР°СЋС‰РёР№ С‚РµРі\n");
             }
 
         }
         return strBuilder.toString();
-		
 	}
 	
 	public static void main(String[] args) {
 		String XML = "<notes>\n"
-				   + "    <noteid=\"1\">\n"
-			       + "        <to>Вася</to>\n"
-				   + "		  <from>Света</from>\n"
-				   + "		  <heading>Напоминание</heading>\n"
-				   + "		  <body>Позвони мне завтра!</body>\n"
-				   + "	  </note>\n"
-				   + "	  <noteid=\"2\">\n"
-				   + "		  <to>Петя</to>\n"
-				   + "		  <from>Маша</from>\n"
-				   + "		  <heading>Важноенапоминание</heading>\n"
-				   + "		  <body/>\n"
-				   + "	  </note>\n"
-				   + "</notes>\n";
+				   + "   <note id = \"1\">\n"
+				   + "       <to>Р’Р°СЃСЏ</to>\n"
+				   + "       <from>РЎРІРµС‚Р°</from>\n"
+				   + "       <heading>РќР°РїРѕРјРёРЅР°РЅРёРµ</heading>\n"
+				   + "       <body>РџРѕР·РІРѕРЅРё РјРЅРµ Р·Р°РІС‚СЂР°!</body>\n"
+				   + "   </note>\n"
+				   + "   <note id = \"2\">\n"
+		   		   + "       <to>РџРµС‚СЏ</to>\n"
+				   + "       <from>РњР°С€Р°</from>\n"
+				   + "       <heading>Р’Р°Р¶РЅРѕРµ РЅР°РїРѕРјРёРЅР°РЅРёРµ</heading>\n"
+				   + "       <body/>\n"
+				   + "   </note>\n"
+				   + "</notes>";
 		System.out.println(XMLParser(XML));
 	}
 }

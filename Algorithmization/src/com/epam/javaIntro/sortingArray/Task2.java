@@ -1,33 +1,44 @@
 package com.epam.javaIntro.sortingArray;
 
-import java.util.Arrays;
-
 /*
- * 2.Даны две последовательности (неубывающие). Образовать из них новую
- * последовательность чисел так, чтобы она тоже была неубывающей.
- * Примечание. Дополнительный массив не использовать. 
+ * 2.Р”Р°РЅС‹ РґРІРµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё a1<=a2<=3<=...<=an Рё b1<=b2<=b3<=...<=bn. 
+ *   РћР±СЂР°Р·РѕРІР°С‚СЊ РёР· РЅРёС… РЅРѕРІСѓСЋ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ С‡РёСЃРµР» С‚Р°Рє, С‡С‚РѕР±С‹ РѕРЅР° С‚РѕР¶Рµ Р±С‹Р»Р° РЅРµСѓР±С‹РІР°СЋС‰РµР№.
+ *   РџСЂРёРјРµС‡Р°РЅРёРµ.Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РјР°СЃСЃРёРІ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ.
  */
 
 public class Task2 {
 	public static void main(String[] args) {
-        int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int[] arr2 = {10, 11, 12, 13, 14, 15, 16};
-        System.out.println(Arrays.toString(resultArray(arr1, arr2)));
+        int[] arr1 = {1, 2, 4, 4, 5, 6, 7, 8, 16, 23};
+        int[] arr2 = {3, 11, 13, 14, 15, 25};
+        
+        
+        System.out.println("\nРќРѕРІС‹Р№ РјР°СЃСЃРёРІ: ");
+        for (int i = 0; i < resultArray(arr1, arr2).length; i++) {
+            System.out.print(resultArray(arr1, arr2)[i] + " ");
+        }
     }
 
     private static int[] resultArray(int[] arr1, int[] arr2) {
-        if (arr1 == null && arr2 == null) return null;
-        if (arr1 == null) return arr2;
-        if (arr2 == null) return arr1;
-        if (arr1.length == 0) return arr2;
-        if (arr2.length == 0) return arr1;
-
         int[] result = new int[arr1.length + arr2.length];
-
-        System.arraycopy(arr1, 0, result, 0, arr1.length);
-        System.arraycopy(arr2, 0, result, arr1.length, arr2.length);
-        Arrays.sort(result);
-
+        
+        for (int i = 0; i < arr1.length; i++) {
+        	result[i] = arr1[i];
+        }
+        
+        for (int i = arr1.length; i < arr1.length + arr2.length; i++) {
+        	result[i] = arr2[i - arr1.length];
+        }
+        
+        for (int i = 0; i < result.length; i++) {
+        	for (int j = i + 1; j < result.length - 1; j++) {
+        		if (result[i] > result[j]) {
+        			int temp = result[i];
+        			result[i] = result[j];
+        			result[j] = temp;
+        		}
+        	}
+        }
+        
         return result;
     }
 }

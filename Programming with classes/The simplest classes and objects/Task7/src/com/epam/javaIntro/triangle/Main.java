@@ -1,8 +1,8 @@
 package com.epam.javaIntro.triangle;
 
 /*
- * 7.Описать класс, представляющий треугольник.
- *   Предусмотреть методы для создания объектов, вычисления площади, периметра и точки пересечения медиан.
+ * 7.РћРїРёСЃР°С‚СЊ РєР»Р°СЃСЃ, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє.
+ *   РџСЂРµРґСѓСЃРјРѕС‚СЂРµС‚СЊ РјРµС‚РѕРґС‹ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚РѕРІ, РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё, РїРµСЂРёРјРµС‚СЂР° Рё С‚РѕС‡РєРё РїРµСЂРµСЃРµС‡РµРЅРёСЏ РјРµРґРёР°РЅ.
  */
 
 public class Main {
@@ -15,9 +15,9 @@ public class Main {
 		
 		triangle.showInfo();
 		
-		System.out.printf("\nПериметр треугольника: %.2f", triangle.getPerimeter());
-		System.out.printf("\nПлощадь треугольника: %.2f", triangle.getSquare());
-		System.out.printf("\nКоординаты точки пересечения медиан: (%.2f;%.2f)", 
+		System.out.printf("\nРџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: %.2f", triangle.getPerimeter());
+		System.out.printf("\nРџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: %.2f", triangle.getSquare());
+		System.out.printf("\nРљРѕРѕСЂРґРёРЅР°С‚С‹ С‚РѕС‡РєРё РїРµСЂРµСЃРµС‡РµРЅРёСЏ РјРµРґРёР°РЅ: (%.2f;%.2f)", 
 						  triangle.getMedianIntersectionPoint().getX(), triangle.getMedianIntersectionPoint().getY());
 	}
 }

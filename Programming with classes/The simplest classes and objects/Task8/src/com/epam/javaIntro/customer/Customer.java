@@ -19,15 +19,74 @@ public class Customer {
 		this.bankAccountNumber = bankAccountNumber;
 	}
 	
+	@Override
 	public String toString() {
-		return String.format("Id клиента: %d\n"
-						   + "Имя: %s %s %s\n"
-						   + "Адресс: %s\n"
-						   + "Номер кредитной карточки: %s\n"
-						   + "Номер банковского счета: %s\n",
+		return String.format("Id РєР»РёРµРЅС‚Р°: %d\n"
+						   + "РРјСЏ: %s %s %s\n"
+						   + "РђРґСЂРµСЃСЃ: %s\n"
+						   + "РќРѕРјРµСЂ РєСЂРµРґРёС‚РЅРѕР№ РєР°СЂС‚РѕС‡РєРё: %s\n"
+						   + "РќРѕРјРµСЂ Р±Р°РЅРєРѕРІСЃРєРѕРіРѕ СЃС‡РµС‚Р°: %s\n",
 						   id, lastName, firstName, patronymic, address, creditCardNumber, bankAccountNumber);
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((bankAccountNumber == null) ? 0 : bankAccountNumber.hashCode());
+		result = prime * result + ((creditCardNumber == null) ? 0 : creditCardNumber.hashCode());
+		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+		result = prime * result + ((patronymic == null) ? 0 : patronymic.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (bankAccountNumber == null) {
+			if (other.bankAccountNumber != null)
+				return false;
+		} else if (!bankAccountNumber.equals(other.bankAccountNumber))
+			return false;
+		if (creditCardNumber == null) {
+			if (other.creditCardNumber != null)
+				return false;
+		} else if (!creditCardNumber.equals(other.creditCardNumber))
+			return false;
+		if (firstName == null) {
+			if (other.firstName != null)
+				return false;
+		} else if (!firstName.equals(other.firstName))
+			return false;
+		if (id != other.id)
+			return false;
+		if (lastName == null) {
+			if (other.lastName != null)
+				return false;
+		} else if (!lastName.equals(other.lastName))
+			return false;
+		if (patronymic == null) {
+			if (other.patronymic != null)
+				return false;
+		} else if (!patronymic.equals(other.patronymic))
+			return false;
+		return true;
+	}
+
 	public int getId() {
 		return id;
 	}

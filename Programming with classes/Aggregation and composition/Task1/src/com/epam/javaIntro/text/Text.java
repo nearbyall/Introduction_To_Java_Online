@@ -54,6 +54,4 @@ public class Text {
 	public void setHeader(String header) {
 		this.header = header;
 	}
-	
-	
 }

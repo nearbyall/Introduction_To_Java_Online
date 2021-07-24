@@ -4,22 +4,22 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 3. Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
+ * 3. Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё k-СЋ СЃС‚СЂРѕРєСѓ Рё p-Р№ СЃС‚РѕР»Р±РµС† РјР°С‚СЂРёС†С‹.
  */
 
 
 public class Task3 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во строк матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє N: ");
         int N = in.nextInt();
-        System.out.println("Введите кол-во столбцов матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ M: ");
         int M = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][M];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 matrixA[i][j] = (int) (Math.random() * 100) - 50;
@@ -28,16 +28,16 @@ public class Task3 {
             System.out.println();
         }
 
-        System.out.println("\nНомер строки, которую необходимо вывести: ");
+        System.out.println("\nР’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё k: ");
         int K = in.nextInt();
-        System.out.println("\nНомер столбца, который необходимо вывести: ");
+        System.out.println("\nР’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° l: ");
         int L = in.nextInt();
 
-        System.out.println("\nСтрока: ");
+        System.out.println("\nРЎС‚СЂРѕРєР°: ");
         for (int j = 0; j < M; j++) {
             System.out.printf("%3d ", matrixA[K - 1][j]);
         }
-        System.out.println("\nСтолбец: ");
+        System.out.println("\nРЎС‚РѕР»Р±РµС†: ");
         for (int i = 0; i < N; i++) {
             System.out.printf("\n%3d", matrixA[i][L - 1]);
         }

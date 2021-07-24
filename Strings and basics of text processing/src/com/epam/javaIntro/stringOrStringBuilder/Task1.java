@@ -1,7 +1,7 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 1. Дан текст(строка). Найдите наибольшее количество подряд идущих пробелов в нем.
+ * 1.Р”Р°РЅ С‚РµРєСЃС‚ (СЃС‚СЂРѕРєР°). РќР°Р№РґРёС‚Рµ РЅР°РёР±РѕР»СЊС€РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґСЂСЏРґ РёРґСѓС‰РёС… РїСЂРѕР±РµР»РѕРІ РІ РЅРµРј. 
  */
 
 public class Task1 {
@@ -28,6 +28,6 @@ public class Task1 {
 	
 	public static void main(String[] args) {
 		String text = " My name    is Vlad     ";
-		System.out.println("Наибольшее кол-во подряд идущих пробелов: " + countOfSpaces(text));
+		System.out.println("РќР°РёР±РѕР»СЊС€РµРµ РєРѕР»-РІРѕ РїРѕРґСЂСЏРґ РёРґСѓС‰РёС… РїСЂРѕР±РµР»РѕРІ: " + countOfSpaces(text));
 	}
 }

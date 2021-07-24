@@ -4,26 +4,29 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 5. Даны целые числа а1,а2 ,..., а(n). Вывести на печать только те числа, для которых а(i)> i.
+ * 5.Р”Р°РЅС‹ С†РµР»С‹Рµ С‡РёСЃР»Р° Р°1,Р°2 ,..., Р°n. Р’С‹РІРµСЃС‚Рё РЅР° РїРµС‡Р°С‚СЊ С‚РѕР»СЊРєРѕ С‚Рµ С‡РёСЃР»Р°, РґР»СЏ РєРѕС‚РѕСЂС‹С… Р°i > i.
  */
 
 public class Task5 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во элементов массива: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: ");
         int N = in.nextInt();
+        
         int[] array = new int[N];
-        System.out.println("Сгенерированный массив N элементов: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N; i++) {
             array[i] = (int) (Math.random() * 100 - 50);
             System.out.print(array[i] + " ");
         }
-        System.out.println("\nЭлементы значение которых больше значения их порядкового номера: ");
+        
+        System.out.println("\nР§РёСЃР»Р°, Р·РЅР°С‡РµРЅРёСЏ РєРѕС‚РѕСЂС‹С… Р±РѕР»СЊС€Рµ РёС… РїРѕСЂСЏРґРєРѕРІРѕРіРѕ РЅРѕРјРµСЂР°: ");
         for (int i = 0; i < N; i++) {
             if (array[i] > i + 1) {
                 System.out.print(array[i] + " ");
             }
         }
+        
         in.close();
     }
 }

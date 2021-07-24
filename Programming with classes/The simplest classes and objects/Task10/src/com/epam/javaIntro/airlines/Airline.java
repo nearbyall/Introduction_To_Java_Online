@@ -15,15 +15,65 @@ public class Airline {
 		this.dayOfWeek = dayOfWeek;
 	}
 	
+	@Override
 	public String toString() {
-		return String.format("Пункт назначения: %s\n"
-						   + "Номер рейса: %s\n"
-						   + "Тип самолета: %s\n"
-						   + "Время отправления: %s\n"
-						   + "День отправления: %s\n",
+		return String.format("РџСѓРЅРєС‚ РЅР°Р·РЅР°С‡РµРЅРёСЏ: %s\n"
+						   + "РќРѕРјРµСЂ СЂРµР№СЃР°: %s\n"
+						   + "РўРёРї СЃР°РјРѕР»РµС‚Р°: %s\n"
+						   + "Р’СЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: %s\n"
+						   + "Р”РµРЅСЊ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: %s\n",
 						   destination, flightNumber, aircraftType, departureTime, dayOfWeek);
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((aircraftType == null) ? 0 : aircraftType.hashCode());
+		result = prime * result + ((dayOfWeek == null) ? 0 : dayOfWeek.hashCode());
+		result = prime * result + ((departureTime == null) ? 0 : departureTime.hashCode());
+		result = prime * result + ((destination == null) ? 0 : destination.hashCode());
+		result = prime * result + ((flightNumber == null) ? 0 : flightNumber.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Airline other = (Airline) obj;
+		if (aircraftType == null) {
+			if (other.aircraftType != null)
+				return false;
+		} else if (!aircraftType.equals(other.aircraftType))
+			return false;
+		if (dayOfWeek == null) {
+			if (other.dayOfWeek != null)
+				return false;
+		} else if (!dayOfWeek.equals(other.dayOfWeek))
+			return false;
+		if (departureTime == null) {
+			if (other.departureTime != null)
+				return false;
+		} else if (!departureTime.equals(other.departureTime))
+			return false;
+		if (destination == null) {
+			if (other.destination != null)
+				return false;
+		} else if (!destination.equals(other.destination))
+			return false;
+		if (flightNumber == null) {
+			if (other.flightNumber != null)
+				return false;
+		} else if (!flightNumber.equals(other.flightNumber))
+			return false;
+		return true;
+	}
+
 	public String getDestination() {
 		return destination;
 	}

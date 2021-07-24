@@ -4,20 +4,22 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /*
- * 8. Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
+ * 8.Р”Р°РЅС‹ РґРІР° С‡РёСЃР»Р°. РћРїСЂРµРґРµР»РёС‚СЊ С†РёС„СЂС‹, РІС…РѕРґСЏС‰РёРµ РІ Р·Р°РїРёСЃСЊ РєР°Рє РїРµСЂРІРѕРіРѕ С‚Р°Рє Рё РІС‚РѕСЂРѕРіРѕ С‡РёСЃР»Р°.
  */
 
 public class Task8 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.println("Введите первое число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
 		int x = (int) in.nextLong();
-		System.out.println("Введите второе число");
+		System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
 		int y = (int) in.nextLong();
+		
 		ArrayList<Boolean> list = new ArrayList<>(10);
 		for (int i = 0; i < 10; i++) {
             list.add(false);
         }
+		
 		int temp, num;
 		while (x > 0) {
             num = x % 10;
@@ -31,11 +33,13 @@ public class Task8 {
                 temp /= 10;
             }
         }
+		
 		for (int i = 0; i < 10; i++) {
             if (list.get(i))
                 System.out.print(i + " ");
 
         }
+		
 		in.close();
 	}
 }

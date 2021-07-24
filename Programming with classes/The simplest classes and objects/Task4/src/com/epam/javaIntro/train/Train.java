@@ -11,6 +11,48 @@ public class Train {
 		this.departureTime = departureTime;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("РњРµСЃС‚Рѕ РїСЂРёР±С‹С‚РёСЏ: %s\n"
+						   + "Р’СЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: %s\n"
+						   + "РќРѕРјРµСЂ РїРѕРµР·РґР°: %d",
+						   destination, departureTime, number);
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((departureTime == null) ? 0 : departureTime.hashCode());
+		result = prime * result + ((destination == null) ? 0 : destination.hashCode());
+		result = prime * result + number;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Train other = (Train) obj;
+		if (departureTime == null) {
+			if (other.departureTime != null)
+				return false;
+		} else if (!departureTime.equals(other.departureTime))
+			return false;
+		if (destination == null) {
+			if (other.destination != null)
+				return false;
+		} else if (!destination.equals(other.destination))
+			return false;
+		if (number != other.number)
+			return false;
+		return true;
+	}
+
 	public static void sortByNumber(Train[] trains) {
 		Train tempTrain;
 		boolean flag = true;
@@ -54,18 +96,18 @@ public class Train {
 	public static void printTrainByNumber(Train[] trains, int number) {
 		for (Train train : trains) {
 			if (train.number == number) {
-				System.out.println("Номер поезда: " + train.number +
-								   "\nНазвание пункта назначения: " + train.destination +
-								   "\nВремя отправления: " + train.departureTime);
+				System.out.println("РќРѕРјРµСЂ РїРѕРµР·РґР°: " + train.number +
+								   "\nРќР°Р·РІР°РЅРёРµ РїСѓРЅРєС‚Р° РЅР°Р·РЅР°С‡РµРЅРёСЏ: " + train.destination +
+								   "\nР’СЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: " + train.departureTime);
 			}
 		}
 	}
 	
 	public static void printTrains(Train[] trains) {
 		for (Train train : trains) {
-			System.out.println("Номер поезда: " + train.number +
-							   "\nНазвание пункта назначения: " + train.destination +
-					           "\nВремя отправления: " + train.departureTime);
+			System.out.println("РќРѕРјРµСЂ РїРѕРµР·РґР°: " + train.number +
+							   "\nРќР°Р·РІР°РЅРёРµ РїСѓРЅРєС‚Р° РЅР°Р·РЅР°С‡РµРЅРёСЏ: " + train.destination +
+					           "\nР’СЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: " + train.departureTime);
 		}
 	}
 }

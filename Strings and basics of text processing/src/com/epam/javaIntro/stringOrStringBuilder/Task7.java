@@ -1,21 +1,21 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 7. Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы.
- *    Например, если было введено "abccdedef", то должно быть выведено "abcdef".
+ * 7.Р’РІРѕРґРёС‚СЃСЏ СЃС‚СЂРѕРєР°. РўСЂРµР±СѓРµС‚СЃСЏ СѓРґР°Р»РёС‚СЊ РёР· РЅРµРµ РїРѕРІС‚РѕСЂСЏСЋС‰РёРµСЃСЏ СЃРёРјРІРѕР»С‹ Рё РІСЃРµ РїСЂРѕР±РµР»С‹. РќР°РїСЂРёРјРµСЂ, РµСЃР»Рё Р±С‹Р»Рѕ РІРІРµРґРµРЅРѕ 
+ *	 "abc cde def", С‚Рѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РІС‹РІРµРґРµРЅРѕ "abcdef". 
  */
 
 public class Task7 {
 	public static String removeExtraCharactersAndSpaces(String str) {
 		StringBuilder strBuilder = new StringBuilder(str);
 		for (int i = 0; i < strBuilder.length(); i++) {
-			//Удаление пробелов
+			//РЈРґР°Р»РµРЅРёРµ РїСЂРѕР±РµР»РѕРІ
 			if (strBuilder.charAt(i) == ' ') {
 				strBuilder.deleteCharAt(i);
 				i--;
 				continue;
 			}
-			//Удаление повторяющихся символов
+			//РЈРґР°Р»РµРЅРёРµ РїРѕРІС‚РѕСЂСЏСЋС‰РёС…СЃСЏ СЃРёРјРІРѕР»РѕРІ
 			for (int j = i + 1; j < strBuilder.length(); j++) {
 				if (strBuilder.charAt(j) == strBuilder.charAt(i)) {
 					strBuilder.deleteCharAt(j);

@@ -1,14 +1,14 @@
 package com.epam.javaIntro.stringOrStringBuilder;
 
 /*
- * 9. Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке.
- *    Учитывать только английские буквы.
+ * 9.РџРѕСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕС‡РЅС‹С… (РјР°Р»РµРЅСЊРєРёС…) Рё РїСЂРѕРїРёСЃРЅС‹С… (Р±РѕР»СЊС€РёС…) Р±СѓРєРІ РІ РІРІРµРґРµРЅРЅРѕР№ СЃС‚СЂРѕРєРµ. 
+ *   РЈС‡РёС‚С‹РІР°С‚СЊ С‚РѕР»СЊРєРѕ Р°РЅРіР»РёР№СЃРєРёРµ Р±СѓРєРІС‹.
  */
 
 public class Task9 {
 	public static int countOfSmallLetters(String str) {
 		int count = 0;
-		// В таблице ASCII маленькие английские буквы принадлежат области (96;123)
+		//Р’ С‚Р°Р±Р»РёС†Рµ ASCII СЃС‚СЂРѕС‡РЅС‹Рµ Р°РЅРіР»РёР№СЃРєРёРµ Р±СѓРєРІС‹ РІ РґРёР°РїР°Р·РѕРЅРµ (96;123)
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) > 96 && str.charAt(i) < 123) {
 				count++;
@@ -19,7 +19,7 @@ public class Task9 {
 	
 	public static int countOfLargeLetters(String str) {
 		int count = 0;
-		// В таблице ASCII большие английские буквы принадлежат области (64;91)
+		//Р’ С‚Р°Р±Р»РёС†Рµ ASCII РїСЂРѕРїРёСЃРЅС‹Рµ Р°РЅРіР»РёР№СЃРєРёРµ Р±СѓРєРІС‹ РІ РґРёР°РїР°Р·РѕРЅРµ (64;91)
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) > 64 && str.charAt(i) < 91) {
 				count++;
@@ -33,7 +33,7 @@ public class Task9 {
 					+ "and then change your number\n"
 					+ "I guess that I don't need that though\n"
 					+ "Now you're just somebody that I used to know\n";
-		System.out.println("Кол-во больших букв: " + countOfLargeLetters(text));
-		System.out.println("Кол-во маленьких букв: " + countOfSmallLetters(text));
+		System.out.println("РљРѕР»-РІРѕ РїСЂРѕРїРёСЃРЅС‹С… Р±СѓРєРІ: " + countOfLargeLetters(text));
+		System.out.println("РљРѕР»-РІРѕ СЃС‚СЂРѕС‡РЅС‹С… Р±СѓРєРІ: " + countOfSmallLetters(text));
 	}
 }

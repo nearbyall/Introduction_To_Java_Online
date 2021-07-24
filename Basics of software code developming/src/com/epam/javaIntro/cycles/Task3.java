@@ -3,7 +3,7 @@ package com.epam.javaIntro.cycles;
 import static java.lang.Math.pow;
 
 /*
- * 3. Найти сумму квадратов первых ста чисел.
+ * 3.РќР°Р№С‚Рё СЃСѓРјРјСѓ РєРІР°РґСЂР°С‚РѕРІ РїРµСЂРІС‹С… СЃС‚Р° С‡РёСЃРµР».
  */
 
 public class Task3 {
@@ -12,6 +12,6 @@ public class Task3 {
         for (int i = 0; i <= 100; i++) {
             sum += pow(i, 2);
         }
-        System.out.println("Сумма квадратов первых ста чисел: " + sum);
+        System.out.println("РЎСѓРјРјР° РєРІР°РґСЂР°С‚РѕРІ РїРµСЂРІС‹С… СЃС‚Р° С‡РёСЃРµР»: " + sum);
 	}
 }

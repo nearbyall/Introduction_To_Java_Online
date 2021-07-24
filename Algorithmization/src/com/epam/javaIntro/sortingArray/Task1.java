@@ -3,9 +3,9 @@ package com.epam.javaIntro.sortingArray;
 import java.util.Scanner;
 
 /*
- * 1. Заданы два одномерных массива с различным количеством элементов и натуральное число k.
- *  Объединить их в один  массив,  включив  второй  массив  между k-м  и  (k+1)-м  элементами  первого, 
- *  при  этом  не  используя дополнительный массив.
+ * 1.Р—Р°РґР°РЅС‹ РґРІР° РѕРґРЅРѕРјРµСЂРЅС‹С… РјР°СЃСЃРёРІР° СЃ СЂР°Р·Р»РёС‡РЅС‹Рј РєРѕР»РёС‡РµСЃС‚РІРѕРј СЌР»РµРјРµРЅС‚РѕРІ Рё РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ k.
+ *   РћР±СЉРµРґРёРЅРёС‚СЊ РёС… РІ РѕРґРёРЅ  РјР°СЃСЃРёРІ,  РІРєР»СЋС‡РёРІ  РІС‚РѕСЂРѕР№  РјР°СЃСЃРёРІ  РјРµР¶РґСѓ k-Рј  Рё  (k+1) -Рј  СЌР»РµРјРµРЅС‚Р°РјРё
+ *   РїРµСЂРІРѕРіРѕ,  РїСЂРё  СЌС‚РѕРј  РЅРµ  РёСЃРїРѕР»СЊР·СѓСЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РјР°СЃСЃРёРІ.
  */
 
 public class Task1 {
@@ -14,18 +14,18 @@ public class Task1 {
         int[] arrayA = new int[]{1, 8, 3, 4, 5, 6};
         int[] arrayB = new int[]{7, 8, 9, 0};
 
-        System.out.println("Введите число натуральное число K: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ K: ");
         int K = in.nextInt();
 
         int[] resultArray = resultArray(arrayA, arrayB, K);
-        System.out.println("\nНовый массив: ");
+        System.out.println("\nРќРѕРІС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < resultArray.length; i++) {
             System.out.print(resultArray[i] + " ");
         }
         in.close();
     }
 
-    public static int[] resultArray(int[] a, int[] b, int i) {
+    public static int[] resultArray(int[] a, int[] b, int k) {
         int aLenght = a.length;
         int bLenght = b.length;
         int[] c = new int[aLenght + bLenght];
@@ -34,8 +34,8 @@ public class Task1 {
         System.arraycopy(b, 0, c, aLenght, bLenght);
 
         int shift;
-        for (int index = 0; index < bLenght; index++) {
-            shift = index + i;
+        for (int i = 0; i < bLenght; i++) {
+            shift = i + k;
             int temp = c[shift];
             c[shift] = c[shift + bLenght];
             c[shift + bLenght] = temp;

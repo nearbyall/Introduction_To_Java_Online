@@ -3,19 +3,19 @@ package com.epam.javaIntro.branching;
 import java.util.Scanner;
 
 /*
- * 2. Íàéòè max{min(a, b), min(c, d)}.
+ * 2.ÐÐ°Ð¹Ñ‚Ð¸ max{min(a, b), min(c, d)}.
  */
 
 public class Task2 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Ââåäèòå çíà÷åíèå ïåðåìåííîé a: ");
+        System.out.print("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ a: ");
         double a = in.nextDouble();
-        System.out.print("Ââåäèòå çíà÷åíèå ïåðåìåííîé b: ");
+        System.out.print("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ b: ");
         double b = in.nextDouble();
-        System.out.print("Ââåäèòå çíà÷åíèå ïåðåìåííîé c: ");
+        System.out.print("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ c: ");
         double c = in.nextDouble();
-        System.out.print("Ââåäèòå çíà÷åíèå ïåðåìåííîé d: ");
+        System.out.print("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ d: ");
         double d = in.nextDouble();
 
         if (a > b) {
@@ -48,6 +48,7 @@ public class Task2 {
             }
 
         }
+        
         in.close();
     }
 

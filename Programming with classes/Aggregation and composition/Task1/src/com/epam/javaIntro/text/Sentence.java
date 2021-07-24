@@ -12,10 +12,6 @@ public class Sentence {
 	public Sentence(ArrayList<Word> words, String endOfSentence) {
 		this.sentence = new StringBuilder("");
 		for (int i = 0; i < words.size(); i++) {
-			/*
-			 * Если слово первое в предложении, то начинается с заглавной буквы
-			 * Если слово последнее в предложении, то ставится знак заканчивающий предложение
-			 */
 			if (i == 0) {
 				words.get(i).converFirstLetterToUppercase();
 				this.sentence.append(words.get(i) + " ");

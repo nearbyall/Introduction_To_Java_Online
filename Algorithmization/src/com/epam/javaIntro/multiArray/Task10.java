@@ -4,19 +4,19 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 10. Найти положительные элементы главной диагонали квадратной матрицы.
+ * 10.РќР°Р№С‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹.
  */
 
 public class Task10 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите размерность квадратной матрицы матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ N: ");
         int N = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][N];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРёСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 matrixA[i][j] = (int) ((Math.random() * 100) - 50);
@@ -25,7 +25,7 @@ public class Task10 {
             System.out.println();
         }
 
-        System.out.println("\nПоложительные элементы главной диагонали: ");
+        System.out.println("\nРџРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё: ");
         for (int i =0;i<N;i++) {
             for (int j =0;j<N;j++) {
                 if (i == j && matrixA[i][j] > 0) {

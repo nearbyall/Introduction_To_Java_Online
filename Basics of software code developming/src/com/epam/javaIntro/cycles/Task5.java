@@ -3,16 +3,17 @@ package com.epam.javaIntro.cycles;
 import java.util.Scanner;
 
 /*
- * 5. Даны числовой ряд и некоторое число е.Найти сумму тех членов ряда,
- *  модуль которых больше или равен заданному е.Общий член ряда имеет вид:
- *  a(n) = 1/2^n + 1/3^n
+ * 5.Р”Р°РЅС‹  С‡РёСЃР»РѕРІРѕР№  СЂСЏРґ  Рё  РЅРµРєРѕС‚РѕСЂРѕРµ  С‡РёСЃР»Рѕ  Рµ.  РќР°Р№С‚Рё  СЃСѓРјРјСѓ  С‚РµС…  С‡Р»РµРЅРѕРІ СЂСЏРґР°,
+ *   РјРѕРґСѓР»СЊ  РєРѕС‚РѕСЂС‹С…  Р±РѕР»СЊС€Рµ  РёР»Рё  СЂР°РІРµРЅ Р·Р°РґР°РЅРЅРѕРјСѓ Рµ. РћР±С‰РёР№ С‡Р»РµРЅ СЂСЏРґР° РёРјРµРµС‚ РІРёРґ:
+ *   a(n) = 1/2^n + 1/3^n
  */
 
 public class Task5 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите значение точности E: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№ E: ");
         double E = in.nextDouble();
+        
         int n = 1;
         double sum = 0;
         while (true) {
@@ -24,6 +25,7 @@ public class Task5 {
             n++;
         }
         System.out.println(sum);
+        
         in.close();
     }
 }

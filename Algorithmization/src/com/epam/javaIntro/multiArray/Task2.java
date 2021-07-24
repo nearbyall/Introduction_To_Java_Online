@@ -4,19 +4,19 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 2. Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
+ * 2.Р”Р°РЅР° РєРІР°РґСЂР°С‚РЅР°СЏ РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ СЌР»РµРјРµРЅС‚С‹, СЃС‚РѕСЏС‰РёРµ РЅР° РґРёР°РіРѕРЅР°Р»Рё.
  */
 
 public class Task2 {
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите размерность квадратной матрицы матрицы: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ N: ");
         int N = in.nextInt();
 
         int[][] matrixA;
         matrixA = new int[N][N];
 
-        System.out.println("Сгенерированная матрица: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РјР°С‚СЂРёС†Р°: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 matrixA[i][j] = (int) (Math.random() * 100) - 50;
@@ -25,7 +25,7 @@ public class Task2 {
             System.out.println();
         }
 
-        System.out.println("\nЭлементы стоящие на диагонали матрицы: ");
+        System.out.println("\nР­Р»РµРјРµРЅС‚С‹ СЃС‚РѕСЏС‰РёР№ РЅР° РґРёР°РіРѕРЅР°Р»Рё: ");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (i == j) {

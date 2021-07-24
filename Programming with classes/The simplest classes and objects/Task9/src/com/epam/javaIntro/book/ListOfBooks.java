@@ -13,19 +13,49 @@ public class ListOfBooks {
 		this.books = books;
 	}
 	
+	@Override
+	public String toString() {
+		return "ListOfBooks [books=" + books + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((books == null) ? 0 : books.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ListOfBooks other = (ListOfBooks) obj;
+		if (books == null) {
+			if (other.books != null)
+				return false;
+		} else if (!books.equals(other.books))
+			return false;
+		return true;
+	}
+
 	public void addToList(Book book) {
 		books.add(book);
 	}
 	
 	public void printBooks() {
-		System.out.println("Ñïèñîê êíèã:\n");
+		System.out.println("Ð¡Ð¿Ð¸ÑÐ¾Ðº ÐºÐ½Ð¸Ð³:\n");
 		for (Book book : books) {
 			System.out.println(book.toString());
 		}
 	}
 	
 	public void printBooksByAuthor(String author) {
-		System.out.printf("Êíèãè íàïèñàííûå %s:\n", author);
+		System.out.printf("ÐšÐ½Ð¸Ð³Ð¸ Ð½Ð°Ð¿Ð¸ÑÐ°Ð½Ð½Ñ‹Ðµ %s:\n", author);
 		for (Book book : books) {
 			if (book.getAuthors().equalsIgnoreCase(author)) {
 				System.out.println(book.toString());
@@ -34,7 +64,7 @@ public class ListOfBooks {
 	}
 	
 	public void printBooksByPublisher(String publisher) {
-		System.out.printf("Êíèãè èçäàííûå %s:\n", publisher);
+		System.out.printf("ÐšÐ½Ð¸Ð³Ð¸ Ð¸Ð·Ð´Ð°Ð½Ð½Ñ‹Ðµ %s:\n", publisher);
 		for (Book book : books) {
 			if (book.getPublisher().equalsIgnoreCase(publisher)) {
 				System.out.println(book.toString());
@@ -43,7 +73,7 @@ public class ListOfBooks {
 	}
 	
 	public void printBooksAfterSpecificYear(int yearOfPublishing) {
-		System.out.printf("Êíèãè âûïóùåííûå îò %d âêëþ÷èòåëüíî:\n", yearOfPublishing);
+		System.out.printf("ÐšÐ½Ð¸Ð³Ð¸ Ð²Ñ‹Ð¿ÑƒÑ‰ÐµÐ½Ð½Ñ‹Ðµ Ð¾Ñ‚ %d Ð²ÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾:\n", yearOfPublishing);
 		for (Book book : books) {
 			if (book.getYearOfPublishing() >= yearOfPublishing) {
 				System.out.println(book.toString());

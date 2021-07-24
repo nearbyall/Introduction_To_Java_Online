@@ -4,37 +4,38 @@ import java.util.Scanner;
 import java.lang.Math;
 
 /*
- * 6. Задана последовательность Nвещественных чисел. 
- * Вычислить сумму чисел, порядковые номера которых являются простыми числами.
+ * 6.Р—Р°РґР°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ NРІРµС‰РµСЃС‚РІРµРЅРЅС‹С… С‡РёСЃРµР».
+ *   Р’С‹С‡РёСЃР»РёС‚СЊ СЃСѓРјРјСѓ С‡РёСЃРµР», РїРѕСЂСЏРґРєРѕРІС‹Рµ РЅРѕРјРµСЂР° РєРѕС‚РѕСЂС‹С… СЏРІР»СЏСЋС‚СЃСЏ РїСЂРѕСЃС‚С‹РјРё С‡РёСЃР»Р°РјРё.
  */
 
 public class Task6 {
-	public static boolean Simple(int value) {
-        for (int i = 2; i < value; i++) {
-            if (value % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-	
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите кол-во элементов массива: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° N: ");
         int N = in.nextInt();
+        
         double[] array = new double[N];
-        System.out.println("Сгенерированный массив N элементов: ");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: ");
         for (int i = 0; i < N; i++) {
-            array[i] = (Math.random() * 100 - 50); // Случайная числовая последовательность
-            System.out.print(array[i] + " ");
+            array[i] = (Math.random() * 100 - 50);
+            System.out.printf("%.2f ", array[i]);
         }
+        
         double sum = 0;
         for (int i =0;i<N;i++) {
-            if (Simple(i)) {
+        	//РџСЂРѕРІРµСЂРєР°, СЏРІР»СЏРµС‚СЃСЏ
+        	boolean isSimple = true;
+        	for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                	isSimple = false;
+                }
+            }
+            if (isSimple) {
                 sum += array[i];
             }
         }
-        System.out.println("\nСумма элементов порядковый номер которых является простым числом: " + sum);
+        System.out.printf("\nРЎСѓРјРјР° С‡РёСЃРµР», РїРѕСЂСЏРґРєРѕРІС‹Рµ РЅРѕРјРµСЂР° РєРѕС‚РѕСЂС‹С… СЏРІР»СЏСЋС‚СЃСЏ РїСЂРѕСЃС‚С‹РјРё С‡РёСЃР»Р°РјРё: %.2f", sum);
+        
         in.close();
     }
 }

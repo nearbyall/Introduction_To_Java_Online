@@ -1,7 +1,7 @@
 package com.epam.javaIntro.arrayOfCharacter;
 
 /*
- * 1. Дан массив названий переменных в camelCase. Преобразовать названия в snake_case
+ * 1.Р”Р°РЅ РјР°СЃСЃРёРІ РЅР°Р·РІР°РЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С… РІ camelCase. РџСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РЅР°Р·РІР°РЅРёСЏ РІ snake_case.
  */
 
 public class Task1 {
