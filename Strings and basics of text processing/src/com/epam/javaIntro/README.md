@@ -1,0 +1,4 @@
+Решения задач третьего модуля:
+- [arrayOfCharacter - содержит решения заданий из блока работа со строкой как с массивом символов.](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Strings%20and%20basics%20of%20text%20processing/src/com/epam/javaIntro/arrayOfCharacter)
+- [stringOrStringBuilder - содержит решения задач из блока работа со строкой как с объектом типа String или StringBuilder.](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Strings%20and%20basics%20of%20text%20processing/src/com/epam/javaIntro/stringOrStringBuilder)
+- [regularExpression - содержит решения задач из блока работа с регулярными выражениями (Pattern, Matcher).](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Strings%20and%20basics%20of%20text%20processing/src/com/epam/javaIntro/regularExpression)
