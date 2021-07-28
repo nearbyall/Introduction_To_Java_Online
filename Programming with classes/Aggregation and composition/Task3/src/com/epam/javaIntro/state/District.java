@@ -21,9 +21,9 @@ public class District {
 	
 	@Override
 	public String toString() {
-		return String.format("РќР°Р·РІР°РЅРёРµ СЂРµРіРёРѕРЅР°: %s\n", name);
+		return this.getClass().getSimpleName() + "[name=" + name + ", cities=" + cities + ", centerOfDistrict=" + centerOfDistrict + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -70,9 +70,9 @@ public class District {
 	
 	public void printCenterOfDistrict() {
 		if (centerOfDistrict != null ) {
-			System.out.printf("Р Р°Р№РѕРЅ %s, СЂР°Р№РѕРЅРЅС‹Р№ С†РµРЅС‚СЂ %s\n", name, centerOfDistrict); 
+			System.out.printf("Район %s, районный центр %s\n", name, centerOfDistrict); 
 		} else {
-			System.out.println("Р Р°Р№РѕРЅРЅС‹Р№ С†РµРЅС‚СЂ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚");
+			System.out.println("Районный центр отсутствует");
 		}
 	}
 	

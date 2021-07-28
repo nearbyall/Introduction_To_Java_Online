@@ -13,7 +13,7 @@ public class Bank {
 
 	@Override
 	public String toString() {
-		return String.format("Название банка: %s\n", name);
+		return this.getClass().getSimpleName() + " [name=" + name + ", clients=" + clients + "]";
 	}
 
 	@Override

@@ -16,10 +16,10 @@ public class Time {
 		this.setMinutes(minutes);
 		this.setHours(hours);
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("Время %02d:%02d:%02d\n", hours, minutes, seconds);
+		return this.getClass().getSimpleName() + " [seconds=" + seconds + ", minutes=" + minutes + ", hours=" + hours + "]";
 	}
 
 	@Override

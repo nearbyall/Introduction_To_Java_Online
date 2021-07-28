@@ -24,9 +24,10 @@ public class Region {
 	
 	@Override
 	public String toString() {
-		return String.format("РќР°Р·РІР°РЅРёРµ РѕР±Р»Р°СЃС‚Рё: %s\n", name);
+		return this.getClass().getSimpleName() + " [name=" + name + ", square=" + square + ", districts=" + districts + ", centerOfRegion="
+				+ centerOfRegion + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -79,9 +80,9 @@ public class Region {
 	
 	public void printCenterOfRegion() {
 		if (centerOfRegion != null) {
-			System.out.printf("РћР±Р»Р°СЃС‚СЊ %s, РѕР±Р»Р°СЃС‚РЅРѕР№ С†РµРЅС‚СЂ %s\n", name, centerOfRegion.getName());
+			System.out.printf("Область %s, областной центр %s\n", name, centerOfRegion.getName());
 		} else {
-			System.out.println("РћР±Р»Р°СЃС‚РЅРѕР№ С†РµРЅС‚СЂ РЅРµ Р·Р°РґР°РЅ");
+			System.out.println("Областной центр не задан");
 		}
 	}
 	

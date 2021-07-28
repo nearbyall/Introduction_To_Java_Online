@@ -15,9 +15,10 @@ public class City {
 	
 	@Override
 	public String toString() {
-		return String.format("Название города: %s", name);
+		return this.getClass().getSimpleName() + " [name=" + name + ", regionalCenter=" + regionalCenter + ", capital=" + capital
+				+ ", districtCenter=" + districtCenter + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

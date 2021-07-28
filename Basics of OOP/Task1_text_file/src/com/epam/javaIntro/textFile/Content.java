@@ -22,10 +22,10 @@ public class Content {
 	public void setText(String text) {
 		this.text = text;
 	}
-
+	
 	@Override
 	public String toString() {
-		return String.format("Содержимое: %s", text);
+		return "Content [text=" + text + "]";
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class Text {
 	
 	@Override
 	public String toString() {
-		return String.format("\t\t%s\n%s", header, text.toString());
+		return String.format("\n%s\n%s", header, text.toString());
 	}
 	
 	public void printText() {

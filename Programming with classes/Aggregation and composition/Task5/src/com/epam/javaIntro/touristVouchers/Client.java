@@ -13,15 +13,7 @@ public class Client {
 
 	@Override
 	public String toString() {
-		if (voucher != null) {
-			return String.format("Клиент %s %s\n"
-					           + "%s", 
-					           lastName, firstName, voucher.toString());
-		} else {
-			return String.format("Клиент %s %s\n",
-					             lastName, firstName);
-		}
-		
+		return this.getClass().getSimpleName() + " [lastName=" + lastName + ", firstName=" + firstName + ", voucher=" + voucher + "]";
 	}
 
 	@Override
@@ -59,6 +51,17 @@ public class Client {
 		} else if (!voucher.equals(other.voucher))
 			return false;
 		return true;
+	}
+	
+	public String getInfo() {
+		if (voucher != null) {
+			return String.format("Клиент %s %s\n"
+					           + "%s", 
+					           lastName, firstName, voucher.toString());
+		} else {
+			return String.format("Клиент %s %s\n",
+					             lastName, firstName);
+		}
 	}
 	
 	public String getLastName() {

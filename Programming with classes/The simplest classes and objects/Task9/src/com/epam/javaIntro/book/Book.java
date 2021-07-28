@@ -23,16 +23,11 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		return String.format("Id книги: %d\n"
-						   + "Название: %s\n"
-						   + "Автор(ы): %s\n"
-						   + "Издательство: %s\n"
-						   + "Год публикации: %d\n"
-						   + "Цена: %.2f $\n"
-						   + "Тип переплета: %s\n",
-						   id, name, authors, publisher, yearOfPublishing, price, bindingType);
+		return this.getClass().getSimpleName() + " [id=" + id + ", name=" + name + ", authors=" + authors + ", publisher=" + publisher
+				+ ", yearOfPublishing=" + yearOfPublishing + ", numberOfPages=" + numberOfPages + ", price=" + price
+				+ ", bindingType=" + bindingType + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -88,6 +83,17 @@ public class Book {
 		return true;
 	}
 
+	public String getInfo() {
+		return String.format("Id книги: %d\n"
+				   + "Название: %s\n"
+				   + "Автор(ы): %s\n"
+				   + "Издательство: %s\n"
+				   + "Год публикации: %d\n"
+				   + "Цена: %.2f $\n"
+				   + "Тип переплета: %s\n",
+				   id, name, authors, publisher, yearOfPublishing, price, bindingType);
+	}
+	
 	public int getId() {
 		return id;
 	}

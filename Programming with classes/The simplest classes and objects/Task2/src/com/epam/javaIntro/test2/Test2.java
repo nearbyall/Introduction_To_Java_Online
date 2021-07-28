@@ -28,4 +28,34 @@ public class Test2 {
 	public int getSecondVariable() {
 		return secondVariable;
 	}
+
+	@Override
+	public String toString() {
+		return this.getClass().getSimpleName() + " [firstVariable=" + firstVariable + ", secondVariable=" + secondVariable + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + firstVariable;
+		result = prime * result + secondVariable;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Test2 other = (Test2) obj;
+		if (firstVariable != other.firstVariable)
+			return false;
+		if (secondVariable != other.secondVariable)
+			return false;
+		return true;
+	}
 }

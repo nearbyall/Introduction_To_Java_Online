@@ -15,7 +15,7 @@ public class ListOfAirlines {
 	
 	@Override
 	public String toString() {
-		return "ListOfAirlines [airlines=" + airlines + "]";
+		return this.getClass().getSimpleName() + " [airlines=" + airlines + "]";
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class ListOfAirlines {
 	public void printAirlines() {
 		System.out.println("Список рейсов: \n");
 		for (Airline airline : airlines) {
-			System.out.println(airline.toString());
+			System.out.println(airline.getInfo());
 		}
 	}
 	
@@ -58,7 +58,7 @@ public class ListOfAirlines {
 		System.out.printf("\nСписок рейсов направляющихся в %s: \n", destination);
 		for (Airline airline : airlines) {
 			if (airline.getDestination().equalsIgnoreCase(destination)) {
-				System.out.println(airline.toString());
+				System.out.println(airline.getInfo());
 			}
 		}
 	}
@@ -67,7 +67,7 @@ public class ListOfAirlines {
 		System.out.printf("\nСписок рейсов отправляющихся в %s: \n", dayOfWeek);
 		for (Airline airline : airlines) {
 			if (airline.getDayOfWeek().equalsIgnoreCase(dayOfWeek)) {
-				System.out.println(airline.toString());
+				System.out.println(airline.getInfo());
 			}
 		}
 	}
@@ -77,7 +77,7 @@ public class ListOfAirlines {
 		for (Airline airline : airlines) {
 			if (airline.getDayOfWeek().equalsIgnoreCase(dayOfWeek) &&
 				airline.getDepartureTime().compareTo(departureTime) > 0) {
-				System.out.println(airline.toString());
+				System.out.println(airline.getInfo());
 			}
 		}
 	}

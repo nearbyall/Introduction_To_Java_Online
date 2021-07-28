@@ -17,14 +17,10 @@ public class Airline {
 	
 	@Override
 	public String toString() {
-		return String.format("Пункт назначения: %s\n"
-						   + "Номер рейса: %s\n"
-						   + "Тип самолета: %s\n"
-						   + "Время отправления: %s\n"
-						   + "День отправления: %s\n",
-						   destination, flightNumber, aircraftType, departureTime, dayOfWeek);
+		return this.getClass().getSimpleName() + " [destination=" + destination + ", flightNumber=" + flightNumber + ", aircraftType="
+				+ aircraftType + ", departureTime=" + departureTime + ", dayOfWeek=" + dayOfWeek + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -74,6 +70,15 @@ public class Airline {
 		return true;
 	}
 
+	public String getInfo() {
+		return String.format("Пункт назначения: %s\n"
+				   + "Номер рейса: %s\n"
+				   + "Тип самолета: %s\n"
+				   + "Время отправления: %s\n"
+				   + "День отправления: %s\n",
+				   destination, flightNumber, aircraftType, departureTime, dayOfWeek);
+	}
+	
 	public String getDestination() {
 		return destination;
 	}

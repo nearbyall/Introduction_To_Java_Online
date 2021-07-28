@@ -19,14 +19,8 @@ public class Voucher {
 
 	@Override
 	public String toString() {
-		return String.format("Путевка\n"
-						   + "Cтрана: %s\n"
-						   + "Кол-во дней: %d\n"
-						   + "Цена: %.2f $\n"
-						   + "Вид путевки: %s\n"
-						   + "Вид транспорта: %s\n"
-						   + "Вид питания: %s\n",
-						   country, countOfDays, price, voucherType.getValue(), transportType.getValue(), foodType.getValue());
+		return this.getClass().getSimpleName() + " [country=" + country + ", countOfDays=" + countOfDays + ", price=" + price + ", voucherType="
+				+ voucherType + ", transportType=" + transportType + ", foodType=" + foodType + "]";
 	}
 
 	@Override
@@ -71,6 +65,17 @@ public class Voucher {
 		return true;
 	}
 
+	public String getInfo() {
+		return String.format("Путевка\n"
+				   + "Cтрана: %s\n"
+				   + "Кол-во дней: %d\n"
+				   + "Цена: %.2f $\n"
+				   + "Вид путевки: %s\n"
+				   + "Вид транспорта: %s\n"
+				   + "Вид питания: %s\n",
+				   country, countOfDays, price, voucherType.getValue(), transportType.getValue(), foodType.getValue());
+	}
+	
 	public String getCountry() {
 		return country;
 	}

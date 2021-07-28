@@ -29,9 +29,7 @@ public abstract class File {
 
 	@Override
 	public String toString() {
-		return String.format("Название файла: %s\n"
-					       + "Название директории: %s\n",
-					       name, directory.getName());
+		return "File [name=" + name + ", directory=" + directory + "]";
 	}
 
 	@Override

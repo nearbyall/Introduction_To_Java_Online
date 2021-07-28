@@ -13,10 +13,7 @@ public class Train {
 	
 	@Override
 	public String toString() {
-		return String.format("Место прибытия: %s\n"
-						   + "Время отправления: %s\n"
-						   + "Номер поезда: %d",
-						   destination, departureTime, number);
+		return this.getClass().getSimpleName() + "[destination=" + destination + ", departureTime=" + departureTime + ", number=" + number + "]";
 	}
 
 	@Override
@@ -67,6 +64,13 @@ public class Train {
 				}
 			}
 		}
+	}
+	
+	public String getInfo() {
+		return String.format("Место прибытия: %s\n"
+				   + "Время отправления: %s\n"
+				   + "Номер поезда: %d",
+				   destination, departureTime, number);
 	}
 	
 	public static void sortByDestination(Train[] trains) {

@@ -21,12 +21,13 @@ public class State {
 		this.regions = regions;
 		this.capitalOfState = capitalOfState;
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("РќР°Р·РІР°РЅРёРµ РіРѕСЃСѓРґР°СЂСЃС‚РІР°: %s\n", name);
+		return this.getClass().getSimpleName() + " [name=" + name + ", square=" + square + ", regions=" + regions + ", capitalOfState="
+				+ capitalOfState + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -83,23 +84,23 @@ public class State {
 	
 	public void printCapitalOfState() {
 		if (capitalOfState != null) {
-			System.out.printf("Р“РѕСЃСѓРґР°СЂСЃС‚РІРѕ %s, СЃС‚РѕР»РёС†Р° %s\n", name, capitalOfState.getName());
+			System.out.printf("Государство %s, столица %s\n", name, capitalOfState.getName());
 		} else {
-			System.out.println("РЎС‚РѕР»РёС†Р° РЅРµ Р·Р°РґР°РЅР°");
+			System.out.println("Столица не задана");
 		}
 	}
 	
 	public void printCountOfRegions() {
 		if (regions.size() > 0) {
-			System.out.println("РљРѕР»-РІРѕ РѕР±Р»Р°СЃС‚РµР№: " + regions.size());
+			System.out.println("Кол-во областей: " + regions.size());
 		} else {
-			System.out.println("РћР±Р»Р°СЃС‚Рё РµС‰Рµ РЅРµ РґРѕР±Р°РІР»РµРЅС‹");
+			System.out.println("Области еще не добавлены");
 		}
 	}
 	
 	public void printSquare() {
 		if (square > 0) {
-			System.out.println("РџР»РѕС‰Р°РґСЊ РіРѕСЃСѓРґР°СЂСЃС‚РІР°: " + square);
+			System.out.println("Площадь государства: " + square);
 		}
 	}
 	
@@ -109,7 +110,7 @@ public class State {
 				region.printCenterOfRegion();
 			}
 		} else {
-			System.out.println("РћР±Р»Р°СЃС‚Рё РµС‰Рµ РЅРµ РґРѕР±Р°РІР»РµРЅС‹");
+			System.out.println("Области еще не добавлены");
 		}	
 	}
 	

@@ -15,7 +15,7 @@ public class ListOfBooks {
 	
 	@Override
 	public String toString() {
-		return "ListOfBooks [books=" + books + "]";
+		return this.getClass().getSimpleName() + " [books=" + books + "]";
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class ListOfBooks {
 	public void printBooks() {
 		System.out.println("Список книг:\n");
 		for (Book book : books) {
-			System.out.println(book.toString());
+			System.out.println(book.getInfo());
 		}
 	}
 	
@@ -58,7 +58,7 @@ public class ListOfBooks {
 		System.out.printf("Книги написанные %s:\n", author);
 		for (Book book : books) {
 			if (book.getAuthors().equalsIgnoreCase(author)) {
-				System.out.println(book.toString());
+				System.out.println(book.getInfo());
 			}
 		}
 	}
@@ -67,7 +67,7 @@ public class ListOfBooks {
 		System.out.printf("Книги изданные %s:\n", publisher);
 		for (Book book : books) {
 			if (book.getPublisher().equalsIgnoreCase(publisher)) {
-				System.out.println(book.toString());
+				System.out.println(book.getInfo());
 			}
 		}
 	}
@@ -76,7 +76,7 @@ public class ListOfBooks {
 		System.out.printf("Книги выпущенные от %d включительно:\n", yearOfPublishing);
 		for (Book book : books) {
 			if (book.getYearOfPublishing() >= yearOfPublishing) {
-				System.out.println(book.toString());
+				System.out.println(book.getInfo());
 			}
 		}
 	}

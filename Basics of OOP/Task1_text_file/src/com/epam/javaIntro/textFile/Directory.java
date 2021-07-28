@@ -33,7 +33,7 @@ public class Directory {
 
 	@Override
 	public String toString() {
-		return String.format("Название директории: %s", name);
+		return "Directory [name=" + name + ", files=" + files + "]";
 	}
 
 	@Override

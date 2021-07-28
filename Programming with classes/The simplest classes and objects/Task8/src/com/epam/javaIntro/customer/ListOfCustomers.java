@@ -16,7 +16,7 @@ public class ListOfCustomers {
 	
 	@Override
 	public String toString() {
-		return "ListOfCustomers [base=" + base + "]";
+		return this.getClass().getSimpleName() + " [base=" + base + "]";
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class ListOfCustomers {
 	public void printList() {
 		System.out.println("Вывод клиентов: \n");
 		for (Customer customer : base) {
-			System.out.println(customer.toString());
+			System.out.println(customer.getInfo());
 		}
 	}
 	
@@ -69,7 +69,7 @@ public class ListOfCustomers {
 			}
 		}
 		for (Customer customer : tempBase) {
-			System.out.println(customer.toString());
+			System.out.println(customer.getInfo());
 		}
 	}
 }

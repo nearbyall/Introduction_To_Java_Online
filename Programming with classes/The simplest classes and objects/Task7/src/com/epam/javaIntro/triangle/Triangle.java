@@ -17,13 +17,10 @@ public class Triangle {
 		BC = Point.getDistanceBetweenPoints(B, C);
 		AC = Point.getDistanceBetweenPoints(A, C);
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("\nВершина A треугольника: (%.2f;%.2f)"
-					       + "\nВершина B треугольника: (%.2f;%.2f)"
-					       + "\nВершина C треугольника: (%.2f;%.2f)",
-					       A.getX(), A.getY(), B.getX(), B.getY(), C.getX(), C.getY());
+		return this.getClass().getSimpleName() + " [A=" + A + ", B=" + B + ", C=" + C + ", AB=" + AB + ", BC=" + BC + ", AC=" + AC + "]";
 	}
 
 	@Override

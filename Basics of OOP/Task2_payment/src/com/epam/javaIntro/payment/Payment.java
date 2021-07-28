@@ -12,7 +12,7 @@ public class Payment {
 	public void printCart() {
 		System.out.println("Содержимое корзины: ");
 		for (Product product : cart) {
-			System.out.print(product.toString());
+			System.out.print(product.getInfo());
 		}
 	}
 	
@@ -31,10 +31,10 @@ public class Payment {
 	public void setCart(ArrayList<Product> cart) {
 		this.cart = cart;
 	}
-
+	
 	@Override
 	public String toString() {
-		return cart.toString();
+		return "Payment [cart=" + cart + "]";
 	}
 
 	@Override
@@ -87,11 +87,15 @@ public class Payment {
 			this.price = price;
 		}
 
+		public String getInfo() {
+			return String.format("Название товара: %s\n"
+							   + "Цена: %.2f\n",
+							   name, price);
+		}
+		
 		@Override
 		public String toString() {
-			return String.format("Название товара: %s\n"
-							   + "Цена товара: %.2f\n",
-							   name, price);
+			return "Product [name=" + name + ", price=" + price + "]";
 		}
 
 		@Override

@@ -12,7 +12,7 @@ public class Calendar {
 	public void printDates() {
 		System.out.println("Даты  календаря: ");
 		for (Date date : dates) {
-			System.out.println(date.toString());
+			System.out.println(date.getInfo());
 		}
 	}
 	
@@ -34,7 +34,7 @@ public class Calendar {
 
 	@Override
 	public String toString() {
-		return dates.toString();
+		return "Calendar [dates=" + dates + "]";
 	}
 
 	@Override
@@ -90,11 +90,15 @@ public class Calendar {
 			this.dateType = dateType;
 		}
 
+		public String getInfo() {
+			return String.format("Дата: %s\n"
+					   		   + "Тип дня: %s\n",
+					   		   date, dateType.getValue());
+		}
+
 		@Override
 		public String toString() {
-			return String.format("Дата: %s\n"
-							   + "Тип дня: %s\n",
-							   date, dateType.getValue());
+			return "Date [date=" + date + ", dateType=" + dateType + "]";
 		}
 
 		@Override

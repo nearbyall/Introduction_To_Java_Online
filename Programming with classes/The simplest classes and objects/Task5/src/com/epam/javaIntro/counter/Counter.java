@@ -28,7 +28,7 @@ public class Counter {
 	
 	@Override
 	public String toString() {
-		return "Counter [minValue=" + minValue + ", maxValue=" + maxValue + ", currentValue=" + currentValue + "]";
+		return this.getClass().getSimpleName() + " [minValue=" + minValue + ", maxValue=" + maxValue + ", currentValue=" + currentValue + "]";
 	}
 
 	@Override

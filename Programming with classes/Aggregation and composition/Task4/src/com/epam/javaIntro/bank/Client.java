@@ -18,7 +18,8 @@ public class Client {
 
 	@Override
 	public String toString() {
-		return "Клиент " + lastName + " " + firstName + ", Номер паспорта = " + passportID;
+		return this.getClass().getSimpleName() + " [lastName=" + lastName + ", firstName=" + firstName + ", passportID=" + passportID
+				+ ", clientAccounts=" + clientAccounts + "]";
 	}
 
 	@Override
@@ -65,21 +66,21 @@ public class Client {
 	}
 	
 	public void printInformation() {
-		System.out.println("Пользователь " + toString() + " имеет аккаунты: ");
+		System.out.println("Пользователь " + getFirstName() + " " + getLastName() + " имеет аккаунты: ");
 		for (BankAccount account : clientAccounts) {
-			System.out.println(account.toString());
+			System.out.println(account.getInfo());
 		}
 	}
 	
-	public String getBalance() {
+	public double getBalance() {
 		double balance = 0;
 		for (BankAccount account : clientAccounts) {
 			balance += account.getBalance();
 		}
-		return String.format("Общий баланс: %.2f $", balance);
+		return balance;
 	}
 	
-	public String getPositiveBalances() {
+	public double getPositiveBalances() {
 		double balance = 0;
 		for (BankAccount account : clientAccounts) {
 			if (account.getBalance() > 0) {
@@ -87,10 +88,10 @@ public class Client {
 			}
 
 		}
-		return String.format("Общий баланс с позитивных счетов: %.2f $", balance);
+		return balance;
 	}
 	
-	public String getNegativeBalances() {
+	public double getNegativeBalances() {
 		double balance = 0;
 		for (BankAccount account : clientAccounts) {
 			if (account.getBalance() < 0) {
@@ -98,7 +99,7 @@ public class Client {
 			}
 
 		}
-		return String.format("Общий баланс с отрицательных счетов: %.2f $", balance);
+		return balance;
 	}
 	
 	public void sortByBalance() {
@@ -165,5 +166,4 @@ public class Client {
 	public void setClientAccounts(ArrayList<BankAccount> clientAccounts) {
 		this.clientAccounts = clientAccounts;
 	}
-	
 }

@@ -39,9 +39,9 @@ public class Main {
 		bank.getClientByPassportID("MC6534788").printInformation();
 		bank.getClientByPassportID("MC6534788").sortByBalance();
 		bank.getClientByPassportID("MC6534788").printInformation();
-		System.out.printf("%s\n"
-						+ "%s\n"
-						+ "%s\n",
+		System.out.printf("Общий баланс: %.2f\n"
+						+ "Баланс с положительных счетов: %.2f\n"
+						+ "Баланс с отрицательных счетов: %.2f\n",
 						bank.getClientByPassportID("MC6534788").getBalance(),
 						bank.getClientByPassportID("MC6534788").getPositiveBalances(),
 						bank.getClientByPassportID("MC6534788").getNegativeBalances());

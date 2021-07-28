@@ -65,7 +65,7 @@ public class TouristAgency {
 	public void printVouchers() {
 		int start = 1;
 		for (Voucher voucher : vouchers) {
-			System.out.println(start + ". " + voucher.toString());
+			System.out.println(start + ". " + voucher.getInfo());
 			start++;
 		}
 	}
@@ -122,7 +122,7 @@ public class TouristAgency {
 	
 	public void printClients() {
 		for (Client client : clients) {
-			System.out.println(client.toString());
+			System.out.println(client.getInfo());
 		}
 	}
 	

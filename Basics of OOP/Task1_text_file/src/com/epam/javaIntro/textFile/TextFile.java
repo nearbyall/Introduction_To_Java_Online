@@ -14,7 +14,7 @@ public class TextFile extends File {
 	}
 	
 	public void printContent() {
-		System.out.println(content.toString());
+		System.out.println("Содержание: " + content.getText());
 	}
 	
 	public void addText(String text) {
@@ -39,7 +39,7 @@ public class TextFile extends File {
 
 	@Override
 	public String toString() {
-		return String.format("Название текстового файла: %s", super.getName());
+		return "TextFile [content=" + content + "]";
 	}
 
 	@Override

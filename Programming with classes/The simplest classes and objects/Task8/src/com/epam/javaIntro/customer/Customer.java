@@ -18,17 +18,14 @@ public class Customer {
 		this.creditCardNumber = creditCardNumber;
 		this.bankAccountNumber = bankAccountNumber;
 	}
-	
+
 	@Override
 	public String toString() {
-		return String.format("Id клиента: %d\n"
-						   + "Имя: %s %s %s\n"
-						   + "Адресс: %s\n"
-						   + "Номер кредитной карточки: %s\n"
-						   + "Номер банковского счета: %s\n",
-						   id, lastName, firstName, patronymic, address, creditCardNumber, bankAccountNumber);
+		return this.getClass().getSimpleName() + " [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", patronymic="
+				+ patronymic + ", address=" + address + ", creditCardNumber=" + creditCardNumber
+				+ ", bankAccountNumber=" + bankAccountNumber + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -87,6 +84,15 @@ public class Customer {
 		return true;
 	}
 
+	public String getInfo() {
+		return String.format("Id клиента: %d\n"
+				   + "Имя: %s %s %s\n"
+				   + "Адресс: %s\n"
+				   + "Номер кредитной карточки: %s\n"
+				   + "Номер банковского счета: %s\n",
+				   id, lastName, firstName, patronymic, address, creditCardNumber, bankAccountNumber);
+	}
+	
 	public int getId() {
 		return id;
 	}

@@ -12,10 +12,7 @@ public class BankAccount {
 
 	@Override
 	public String toString() {
-		return String.format("ID: %d\n"
-						   + "Баланс: %.2f\n"
-						   + "Счет открыт: %s\n", 
-						   id, balance, isOpen ? "открыт" : "закрыт");
+		return this.getClass().getSimpleName() + " [id=" + id + ", balance=" + balance + ", isOpen=" + isOpen + "]";
 	}
 
 	@Override
@@ -48,6 +45,13 @@ public class BankAccount {
 		return true;
 	}
 
+	public String getInfo() {
+		return String.format("ID: %d\n"
+				   	       + "Баланс: %.2f\n"
+				           + "Счет открыт: %s\n", 
+				           id, balance, isOpen ? "открыт" : "закрыт");
+	}
+	
 	public void printStatus() {
 		if (isOpen = true) {
 			System.out.printf("\nСчет %d открыт\n", id);
