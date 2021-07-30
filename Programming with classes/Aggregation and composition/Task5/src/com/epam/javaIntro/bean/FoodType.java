@@ -1,4 +1,4 @@
-package com.epam.javaIntro.touristVouchers;
+package com.epam.javaIntro.bean;
 
 public enum FoodType {
 	ALL_INCLUSIVE("Все включено"),

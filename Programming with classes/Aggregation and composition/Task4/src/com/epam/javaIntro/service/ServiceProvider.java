@@ -3,7 +3,7 @@ package com.epam.javaIntro.service;
 import com.epam.javaIntro.service.impl.BankServiceImpl;
 import com.epam.javaIntro.service.impl.ClientServiceImpl;
 
-public class ServiceProvider {
+public final class ServiceProvider {
 	private static final ServiceProvider instance = new ServiceProvider();
 	
 	private ServiceProvider() {};

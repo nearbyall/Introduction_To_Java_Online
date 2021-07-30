@@ -1,14 +1,55 @@
-package com.epam.javaIntro.touristVouchers;
+package com.epam.javaIntro.bean;
 
 public class Client {
 	private String lastName;
 	private String firstName;
 	Voucher voucher;
 	
+	public Client() {
+		this.lastName = "";
+		this.firstName = "";
+		this.voucher = null;
+	}
+	
 	public Client(String lastName, String firstName) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.voucher = null;
+	}
+
+	public String getInfo() {
+		if (voucher != null) {
+			return String.format("Клиент %s %s\n"
+					           + "%s", 
+					           lastName, firstName, voucher.toString());
+		} else {
+			return String.format("Клиент %s %s\n",
+					             lastName, firstName);
+		}
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public Voucher getVoucher() {
+		return voucher;
+	}
+
+	public void setVoucher(Voucher voucher) {
+		this.voucher = voucher;
 	}
 
 	@Override
@@ -52,40 +93,4 @@ public class Client {
 			return false;
 		return true;
 	}
-	
-	public String getInfo() {
-		if (voucher != null) {
-			return String.format("Клиент %s %s\n"
-					           + "%s", 
-					           lastName, firstName, voucher.toString());
-		} else {
-			return String.format("Клиент %s %s\n",
-					             lastName, firstName);
-		}
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public Voucher getVoucher() {
-		return voucher;
-	}
-
-	public void setVoucher(Voucher voucher) {
-		this.voucher = voucher;
-	}
-	
 }

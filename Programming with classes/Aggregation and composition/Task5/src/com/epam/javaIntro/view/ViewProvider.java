@@ -1,6 +1,6 @@
 package com.epam.javaIntro.view;
 
-import com.epam.javaIntro.view.impl.ClientViewImpl;
+import com.epam.javaIntro.view.impl.TouristAgencyViewImpl;
 
 public final class ViewProvider {
 	private static final ViewProvider instance = new ViewProvider();
@@ -11,9 +11,9 @@ public final class ViewProvider {
 		return instance;
 	}
 	
-	private final ClientView clientService = new ClientViewImpl();
+	private final TouristAgencyView touristAgencyView = new TouristAgencyViewImpl();
 
-	public ClientView getClientView() {
-		return clientService;
+	public TouristAgencyView getTouristAgencyView() {
+		return touristAgencyView;
 	}
 }

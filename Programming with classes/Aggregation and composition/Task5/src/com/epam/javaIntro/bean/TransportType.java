@@ -1,4 +1,4 @@
-package com.epam.javaIntro.touristVouchers;
+package com.epam.javaIntro.bean;
 
 public enum TransportType {
 	PLANE("Самолет"),
