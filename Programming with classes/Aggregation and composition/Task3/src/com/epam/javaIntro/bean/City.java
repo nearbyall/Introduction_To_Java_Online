@@ -1,4 +1,4 @@
-package com.epam.javaIntro.state;
+package com.epam.javaIntro.bean;
 
 public class City {
 	private String name;
@@ -6,10 +6,49 @@ public class City {
 	private boolean capital;
 	private boolean districtCenter;
 	
+	public City() {
+		this.name = "";
+		this.regionalCenter = false;
+		this.capital = false;
+		this.districtCenter = false;
+	}
+	
 	public City(String name, boolean regionalCenter, boolean capital, boolean districtCenter) {
 		this.name = name;
 		this.regionalCenter = regionalCenter;
 		this.capital = capital;
+		this.districtCenter = districtCenter;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public boolean isRegionalCenter() {
+		return regionalCenter;
+	}
+	
+	public boolean isCapital() {
+		return capital;
+	}
+	
+	public boolean isDistrictCenter() {
+		return districtCenter;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setRegionalCenter(boolean regionalCenter) {
+		this.regionalCenter = regionalCenter;
+	}
+	
+	public void setCapital(boolean capital) {
+		this.capital = capital;
+	}
+	
+	public void setDistrictCenter(boolean districtCenter) {
 		this.districtCenter = districtCenter;
 	}
 	
@@ -51,37 +90,5 @@ public class City {
 		if (regionalCenter != other.regionalCenter)
 			return false;
 		return true;
-	}
-
-	public String getName() {
-		return name;
-	}
-	
-	public boolean isRegionalCenter() {
-		return regionalCenter;
-	}
-	
-	public boolean isCapital() {
-		return capital;
-	}
-	
-	public boolean isDistrictCenter() {
-		return districtCenter;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setRegionalCenter(boolean regionalCenter) {
-		this.regionalCenter = regionalCenter;
-	}
-	
-	public void setCapital(boolean capital) {
-		this.capital = capital;
-	}
-	
-	public void setDistrictCenter(boolean districtCenter) {
-		this.districtCenter = districtCenter;
 	}
 }

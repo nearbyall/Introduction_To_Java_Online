@@ -1,4 +1,4 @@
-package com.epam.javaIntro.state;
+package com.epam.javaIntro.bean;
 
 import java.util.ArrayList;
 
@@ -16,6 +16,46 @@ public class District {
 	public District(String name, ArrayList<City> cities, City centerOfDistrict) {
 		this.name = name;
 		this.cities = cities;
+		this.centerOfDistrict = centerOfDistrict;
+	}
+	
+
+	public void addCity(City city) {
+		cities.add(city);
+		if (city.isDistrictCenter()) {
+			centerOfDistrict = city;
+		}
+	}
+	
+	public void printCenterOfDistrict() {
+		if (centerOfDistrict != null ) {
+			System.out.printf("Р Р°Р№РѕРЅ %s, СЂР°Р№РѕРЅРЅС‹Р№ С†РµРЅС‚СЂ %s\n", name, centerOfDistrict); 
+		} else {
+			System.out.println("Р Р°Р№РѕРЅРЅС‹Р№ С†РµРЅС‚СЂ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚");
+		}
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public ArrayList<City> getCities() {
+		return cities;
+	}
+	
+	public City getCenterOfDistrict() {
+		return centerOfDistrict;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setCities(ArrayList<City> cities) {
+		this.cities = cities;
+	}
+	
+	public void setCenterOfDistrict(City centerOfDistrict) {
 		this.centerOfDistrict = centerOfDistrict;
 	}
 	
@@ -59,44 +99,5 @@ public class District {
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
-	}
-
-	public void addCity(City city) {
-		cities.add(city);
-		if (city.isDistrictCenter()) {
-			centerOfDistrict = city;
-		}
-	}
-	
-	public void printCenterOfDistrict() {
-		if (centerOfDistrict != null ) {
-			System.out.printf("Район %s, районный центр %s\n", name, centerOfDistrict); 
-		} else {
-			System.out.println("Районный центр отсутствует");
-		}
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public ArrayList<City> getCities() {
-		return cities;
-	}
-	
-	public City getCenterOfDistrict() {
-		return centerOfDistrict;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public void setCities(ArrayList<City> cities) {
-		this.cities = cities;
-	}
-	
-	public void setCenterOfDistrict(City centerOfDistrict) {
-		this.centerOfDistrict = centerOfDistrict;
 	}
 }
