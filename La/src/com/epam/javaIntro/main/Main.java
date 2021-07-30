@@ -22,7 +22,6 @@ public class Main {
 			System.out.println("Succses");
 			// main menu
 		} else {
-			System.out.println("Succses");
 			// goto menu
 		}
 	}
