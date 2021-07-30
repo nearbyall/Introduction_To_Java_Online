@@ -22,6 +22,9 @@
 - [The simplest classes and objects - содержит решения задач из блока простейшие классы и объекты.](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Programming%20with%20classes/The%20simplest%20classes%20and%20objects)
 - [Aggregation and composition - содержит решения задач из блока агрегация и композиция.](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Programming%20with%20classes/Aggregation%20and%20composition)
 
+# [LA](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/La) Done
+Практика Layer architecture
+
 # [Basics of OOP](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Basics%20of%20OOP) Done
 Решения задач пятого модуля:
 - [Task1_text_file - содержит решение задачи №1.](https://github.com/nearbyall/Introduction_To_Java_Online/tree/master/Basics%20of%20OOP/Task1_text_file)
