@@ -1,4 +1,4 @@
-package com.epam.javaIntro.calendar;
+package com.epam.javaIntro.calendar.bean;
 
 import java.util.ArrayList;
 
@@ -30,36 +30,6 @@ public class Calendar {
 
 	public void setDates(ArrayList<Date> dates) {
 		this.dates = dates;
-	}
-
-	@Override
-	public String toString() {
-		return "Calendar [dates=" + dates + "]";
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((dates == null) ? 0 : dates.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Calendar other = (Calendar) obj;
-		if (dates == null) {
-			if (other.dates != null)
-				return false;
-		} else if (!dates.equals(other.dates))
-			return false;
-		return true;
 	}
 
 	public static class Date {

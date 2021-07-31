@@ -1,7 +1,8 @@
-package com.epam.javaIntro.calendar;
+package com.epam.javaIntro.calendar.main;
 
-import com.epam.javaIntro.calendar.Calendar.Date.DateType;
-import com.epam.javaIntro.calendar.Calendar.Date;
+import com.epam.javaIntro.calendar.bean.Calendar;
+import com.epam.javaIntro.calendar.bean.Calendar.Date;
+import com.epam.javaIntro.calendar.bean.Calendar.Date.DateType;
 
 /*
  * Задача 3. 

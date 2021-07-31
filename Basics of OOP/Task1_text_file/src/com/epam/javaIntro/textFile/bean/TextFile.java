@@ -1,4 +1,4 @@
-package com.epam.javaIntro.textFile;
+package com.epam.javaIntro.textFile.bean;
 
 public class TextFile extends File {
 	private Content content;

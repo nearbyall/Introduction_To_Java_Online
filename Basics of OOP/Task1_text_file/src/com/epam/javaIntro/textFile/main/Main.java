@@ -1,4 +1,7 @@
-package com.epam.javaIntro.textFile;
+package com.epam.javaIntro.textFile.main;
+
+import com.epam.javaIntro.textFile.bean.Directory;
+import com.epam.javaIntro.textFile.bean.TextFile;
 
 /*
  * Задача 1.  

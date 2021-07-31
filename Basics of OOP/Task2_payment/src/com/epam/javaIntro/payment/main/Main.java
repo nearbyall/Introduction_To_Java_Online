@@ -1,4 +1,6 @@
-package com.epam.javaIntro.payment;
+package com.epam.javaIntro.payment.main;
+
+import com.epam.javaIntro.payment.bean.Payment;
 
 /*
  * Задача 2.  

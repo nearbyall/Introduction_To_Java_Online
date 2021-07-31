@@ -1,20 +1,16 @@
-package com.epam.javaIntro.textFile;
+package com.epam.javaIntro.textFile.bean;
 
-import java.util.ArrayList;
-
-public class Directory {
+public abstract class File {
 	private String name;
-	private ArrayList<File> files;
+	private Directory directory;
 	
-	public Directory(String name) {
+	public File(String name, Directory directory) {
+		super();
 		this.name = name;
-		this.files = new ArrayList<File>();
+		this.directory = directory;
+		this.directory.addFile(this);
 	}
 
-	public void addFile(File file) {
-		files.add(file);
-	}
-	
 	public String getName() {
 		return name;
 	}
@@ -23,24 +19,24 @@ public class Directory {
 		this.name = name;
 	}
 
-	public ArrayList<File> getFiles() {
-		return files;
+	public Directory getDirectory() {
+		return directory;
 	}
 
-	public void setFiles(ArrayList<File> files) {
-		this.files = files;
+	public void setDirectory(Directory directory) {
+		this.directory = directory;
 	}
 
 	@Override
 	public String toString() {
-		return "Directory [name=" + name + ", files=" + files + "]";
+		return "File [name=" + name + ", directory=" + directory + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((files == null) ? 0 : files.hashCode());
+		result = prime * result + ((directory == null) ? 0 : directory.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
@@ -53,11 +49,11 @@ public class Directory {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Directory other = (Directory) obj;
-		if (files == null) {
-			if (other.files != null)
+		File other = (File) obj;
+		if (directory == null) {
+			if (other.directory != null)
 				return false;
-		} else if (!files.equals(other.files))
+		} else if (!directory.equals(other.directory))
 			return false;
 		if (name == null) {
 			if (other.name != null)
@@ -66,5 +62,4 @@ public class Directory {
 			return false;
 		return true;
 	}
-	
 }

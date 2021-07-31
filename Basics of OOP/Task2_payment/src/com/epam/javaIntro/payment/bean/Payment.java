@@ -1,4 +1,4 @@
-package com.epam.javaIntro.payment;
+package com.epam.javaIntro.payment.bean;
 
 import java.util.ArrayList;
 
