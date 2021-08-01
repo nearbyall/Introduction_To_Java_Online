@@ -1,4 +1,4 @@
-package com.epam.javaIntro.customer;
+package com.epam.javaIntro.bean;
 
 public class Customer {
 	private int id;
@@ -19,6 +19,72 @@ public class Customer {
 		this.bankAccountNumber = bankAccountNumber;
 	}
 
+
+	public String getInfo() {
+		return String.format("Id клиента: %d\n"
+						   + "Имя: %s %s %s\n"
+						   + "Адресс: %s\n"
+						   + "Номер кредитной карточки: %s\n"
+						   + "Номер банковского счета: %s\n",
+						   id, lastName, firstName, patronymic, address, creditCardNumber, bankAccountNumber);
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public String getPatronymic() {
+		return patronymic;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	
+	public String getCreditCardNumber() {
+		return creditCardNumber;
+	}
+	
+	public String getBankAccountNumber() {
+		return bankAccountNumber;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public void setPetronymic(String patronymic) {
+		this.patronymic = patronymic;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public void setCreditCardNumber(String creditCardNumber) {
+		this.creditCardNumber = creditCardNumber;
+	}
+	
+	public void setBankAccountNumber(String bankAccountNumber) {
+		this.bankAccountNumber = bankAccountNumber;
+	}
+	
 	@Override
 	public String toString() {
 		return this.getClass().getSimpleName() + " [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", patronymic="
@@ -82,70 +148,5 @@ public class Customer {
 		} else if (!patronymic.equals(other.patronymic))
 			return false;
 		return true;
-	}
-
-	public String getInfo() {
-		return String.format("Id клиента: %d\n"
-				   + "Имя: %s %s %s\n"
-				   + "Адресс: %s\n"
-				   + "Номер кредитной карточки: %s\n"
-				   + "Номер банковского счета: %s\n",
-				   id, lastName, firstName, patronymic, address, creditCardNumber, bankAccountNumber);
-	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	public String getLastName() {
-		return lastName;
-	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
-	
-	public String getPatronymic() {
-		return patronymic;
-	}
-	
-	public String getAddress() {
-		return address;
-	}
-	
-	public String getCreditCardNumber() {
-		return creditCardNumber;
-	}
-	
-	public String getBankAccountNumber() {
-		return bankAccountNumber;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public void setPetronymic(String patronymic) {
-		this.patronymic = patronymic;
-	}
-	
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
-	public void setCreditCardNumber(String creditCardNumber) {
-		this.creditCardNumber = creditCardNumber;
-	}
-	
-	public void setBankAccountNumber(String bankAccountNumber) {
-		this.bankAccountNumber = bankAccountNumber;
 	}
 }

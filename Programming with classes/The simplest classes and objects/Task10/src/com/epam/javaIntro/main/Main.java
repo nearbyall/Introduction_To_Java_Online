@@ -1,4 +1,9 @@
-package com.epam.javaIntro.airlines;
+package com.epam.javaIntro.main;
+
+import com.epam.javaIntro.bean.Airline;
+import com.epam.javaIntro.bean.ListOfAirlines;
+import com.epam.javaIntro.view.ListOfAirlinesView;
+import com.epam.javaIntro.view.ViewProvider;
 
 /*
  * 10.Создать класс Airline, спецификация которого приведена ниже.
@@ -13,6 +18,9 @@ package com.epam.javaIntro.airlines;
 
 public class Main {
 	public static void main(String[] args) {
+		ViewProvider viewProvider = ViewProvider.getInstance();
+		ListOfAirlinesView listOfAirlinesView = viewProvider.getListOfAirlinesView();
+		
 		ListOfAirlines airlines = new ListOfAirlines();
 		
 		airlines.addAirline(new Airline("Minsk", "5123", "Boeing", "22:43", "Monday"));
@@ -22,12 +30,12 @@ public class Main {
 		airlines.addAirline(new Airline("Washington", "4764", "Boeing", "17:40", "Sunday"));
 		airlines.addAirline(new Airline("Berlin", "5743", "Boeing", "11:26", "Monday"));
 		
-		airlines.printAirlines();
+		listOfAirlinesView.printAirlines(airlines);
 		
-		airlines.printAirlinesByDestination("Minsk");
+		listOfAirlinesView.printAirlinesByDestination(airlines, "Minsk");
 		
-		airlines.printAirlinesByDayOfWeek("Monday");
+		listOfAirlinesView.printAirlinesByDayOfWeek(airlines, "Monday");
 		
-		airlines.printAirlinesByDayOfWeekAndDepartureTime("Monday", "11:26");
+		listOfAirlinesView.printAirlinesByDayOfWeekAndDepartureTime(airlines, "Monday", "11:26");
 	}
 }

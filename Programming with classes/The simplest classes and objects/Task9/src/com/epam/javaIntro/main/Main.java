@@ -1,4 +1,8 @@
-package com.epam.javaIntro.book;
+package com.epam.javaIntro.main;
+
+import com.epam.javaIntro.bean.Book;
+import com.epam.javaIntro.bean.ListOfBooks;
+import com.epam.javaIntro.view.ViewProvider;
 
 /*
  * 9.Создать класс Book, спецификация которого приведена ниже.
@@ -14,6 +18,8 @@ package com.epam.javaIntro.book;
 
 public class Main {
 	public static void main(String[] args) {
+		ViewProvider viewProvider = ViewProvider.getInstance();
+		
 		ListOfBooks books = new ListOfBooks();
 		
 		books.addToList(new Book(1, "Anxious people", "Fredrik Backman", "Sinbad", 2020, 416, 25, "Hard cover"));
@@ -23,12 +29,12 @@ public class Main {
 		books.addToList(new Book(5, "Call me by your name", "Andre Asiman", "Popcorn Books", 2019, 362, 12, "Soft cover"));
 		books.addToList(new Book(6, "Britt-Marie was here", "Fredrik Backman", "Sinbad", 2018, 416, 29, "Hard cover"));
 		
-		books.printBooks();
+		viewProvider.getListOfBooksView().printBooks(books);
 		
-		books.printBooksByAuthor("Fredrik Backman");
+		viewProvider.getListOfBooksView().printBooksByAuthor(books, "Fredrik Backman");
 		
-		books.printBooksByPublisher("Pocket Book");
+		viewProvider.getListOfBooksView().printBooksByPublisher(books, "Pocket Book");
 		
-		books.printBooksAfterSpecificYear(2019);
+		viewProvider.getListOfBooksView().printBooksAfterSpecificYear(books, 2019);
 	}
 }
